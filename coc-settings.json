@@ -1,0 +1,20 @@
+{
+  "languageserver": {
+		"dockerfile": {
+			"command": "docker-langserver",
+			"filetypes": ["dockerfile"],
+			"args": ["--stdio"]
+		},
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": ["go.mod"],
+			"disableWorkspaceFolders": true,
+			"filetypes": ["go"]
+		},
+		"lua": {
+			"command": "lua-lsp",
+			"filetypes": ["lua"]
+		}
+  },
+	"python.linting.enabled": false
+}
