@@ -13,20 +13,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'
 
 "Themes
-Plug 'fcpg/vim-fahrenheit'
 Plug 'arcticicestudio/nord-vim'
-Plug 'ayu-theme/ayu-vim'
-Plug 'junegunn/seoul256.vim'
-Plug 'herrbischoff/cobalt2.vim'
-Plug 'w0ng/vim-hybrid'
-Plug 'altercation/vim-colors-solarized'
-Plug 'morhetz/gruvbox'
-Plug 'mhartington/oceanic-next'
-Plug 'ajmwagar/vim-deus'
-Plug 'sainnhe/everforest'
-Plug 'whatyouhide/vim-gotham'
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'NLKNguyen/papercolor-theme'
 
 "Telescope
 Plug 'nvim-lua/popup.nvim'
