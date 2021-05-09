@@ -3,10 +3,6 @@ call plug#begin('~/.config/nvim/autoload/plug.vim')
 "Python LSP
 Plug 'davidhalter/jedi-vim'
 
-"Status Bar
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
 "Automatically pair brackets
 Plug 'jiangmiao/auto-pairs'
 
@@ -15,7 +11,6 @@ Plug 'scrooloose/nerdcommenter'
 
 "Autoformatting
 Plug 'sbdchd/neoformat'
-Plug 'dense-analysis/ale'
 
 "Themes
 Plug 'fcpg/vim-fahrenheit'
@@ -27,6 +22,11 @@ Plug 'w0ng/vim-hybrid'
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 Plug 'mhartington/oceanic-next'
+Plug 'ajmwagar/vim-deus'
+Plug 'sainnhe/everforest'
+Plug 'whatyouhide/vim-gotham'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'NLKNguyen/papercolor-theme'
 
 "Telescope
 Plug 'nvim-lua/popup.nvim'
@@ -43,6 +43,7 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 "gitgutter
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'itchyny/vim-gitbranch'
 
 "JavaScript and TypeScript
 Plug 'pangloss/vim-javascript'
@@ -61,6 +62,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'wellle/context.vim'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -76,6 +78,5 @@ source ~/.config/nvim/plugins/javascript.vim
 source ~/.config/nvim/plugins/markup.vim
 source ~/.config/nvim/plugins/rust.vim
 source ~/.config/nvim/plugins/coc.vim
-source ~/.config/nvim/plugins/ale.vim
 source ~/.config/nvim/plugins/fzf.vim
 source ~/.config/nvim/plugins/context.vim

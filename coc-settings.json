@@ -16,5 +16,6 @@
 			"filetypes": ["lua"]
 		}
   },
-	"python.linting.enabled": false
+	"coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "javascriptreact", "typescriptreact", "python", "vue"],
+	"diagnostic.virtualText": true
 }

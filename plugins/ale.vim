@@ -1,6 +1,4 @@
-let b:ale_fixers = {'javascript': ['prettier', 'eslint'], 'typescript': ['prettier', 'eslint'], 'javascriptreact': ['prettier', 'eslint'], 'typescriptreact': ['prettier', 'eslint']}
-
-let b:ale_linters = {'python': ['pyright'], 'javascript': ['eslint'], 'typescript': ['eslint'], 'javascriptreact': ['eslint'], 'typescriptreact': ['eslint']}
+let b:ale_linters = {'python': ['pyright']}
 
 " VirtualTextを有効にする
 let g:ale_virtualtext_cursor = 1

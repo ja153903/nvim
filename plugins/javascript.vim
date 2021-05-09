@@ -22,3 +22,8 @@ autocmd FileType javascriptreact set sts=2
 autocmd FileType typescriptreact set sw=2
 autocmd FileType typescriptreact set ts=2
 autocmd FileType typescriptreact set sts=2
+
+"Vue spacing
+autocmd FileType vue set sw=2
+autocmd FileType vue set ts=2
+autocmd FileType vue set sts=2

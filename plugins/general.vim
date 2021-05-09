@@ -15,11 +15,15 @@ set splitright
 set splitbelow
 
 "Set colorscheme
-colorscheme OceanicNext
+"let ayucolor="dark"
+colorscheme nord
+set laststatus=2
 
+"These two lines make sure that the background is transparent
 hi Normal guibg=NONE ctermbg=NONE
 autocmd vimenter * hi EndOfBuffer guibg=NONE ctermbg=NONE
 
+"highlight clear SignColumn
 
 set relativenumber
 set rnu
