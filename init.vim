@@ -64,6 +64,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'wellle/context.vim'
 Plug 'itchyny/lightline.vim'
 
+"terminal
+Plug 'voldikss/vim-floaterm'
+
 call plug#end()
 
 "---- Load Files ----
@@ -80,3 +83,4 @@ source ~/.config/nvim/plugins/rust.vim
 source ~/.config/nvim/plugins/coc.vim
 source ~/.config/nvim/plugins/fzf.vim
 source ~/.config/nvim/plugins/context.vim
+source ~/.config/nvim/plugins/floaterm.vim
