@@ -5,7 +5,7 @@ let mapleader = " "
 inoremap jj <Esc>
 
 "Copy to clipboard
-map <leader>c :%y+<CR>
+map <leader>cp :%y+<CR>
 
 "Split screen horizontally
 map <leader>h :sp<CR>
