@@ -23,7 +23,7 @@ set laststatus=2
 hi Normal guibg=NONE ctermbg=NONE
 autocmd vimenter * hi EndOfBuffer guibg=NONE ctermbg=NONE
 
-"highlight clear SignColumn
+highlight clear SignColumn
 
 set relativenumber
 set rnu

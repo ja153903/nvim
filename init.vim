@@ -18,7 +18,7 @@ Plug 'arcticicestudio/nord-vim'
 "Telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+"Plug 'nvim-telescope/telescope.nvim'
 
 "FzF because Telescope slow
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -38,6 +38,7 @@ Plug 'leafgarland/typescript-vim'
 
 "JSX Support
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'maxmellon/vim-jsx-pretty'
 
 "GraphQL
 Plug 'jparise/vim-graphql'
