@@ -14,6 +14,7 @@ Plug 'sbdchd/neoformat'
 
 "Themes
 Plug 'arcticicestudio/nord-vim'
+Plug 'morhetz/gruvbox'
 
 "Telescope
 Plug 'nvim-lua/popup.nvim'

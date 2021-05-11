@@ -16,7 +16,7 @@ set splitbelow
 
 "Set colorscheme
 "let ayucolor="dark"
-colorscheme nord
+colorscheme gruvbox
 set laststatus=2
 
 "These two lines make sure that the background is transparent
