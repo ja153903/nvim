@@ -19,6 +19,5 @@
 	"coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "javascriptreact", "typescriptreact", "python", "vue"],
 	"diagnostic.virtualText": true,
 	"python.analysis.autoSearchPaths": true,
-	"python.analysis.extraPaths": ["/Users/jaimeabbariao/Documents/bentobox/repos/bentobox/bentobox"],
 	"pyright.enable": true
 }
