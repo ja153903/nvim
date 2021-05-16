@@ -56,6 +56,8 @@ Plug 'itchyny/lightline.vim'
 "terminal
 Plug 'voldikss/vim-floaterm'
 
+Plug 'cespare/vim-toml'
+
 call plug#end()
 
 "---- Load Files ----
