@@ -15,6 +15,8 @@ Plug 'sbdchd/neoformat'
 "Themes
 Plug 'arcticicestudio/nord-vim'
 Plug 'morhetz/gruvbox'
+Plug 'altercation/vim-colors-solarized'
+Plug 'Rigellute/shades-of-purple.vim'
 
 "Telescope
 Plug 'nvim-lua/popup.nvim'
