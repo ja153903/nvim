@@ -60,6 +60,8 @@ Plug 'voldikss/vim-floaterm'
 
 Plug 'cespare/vim-toml'
 
+Plug 'pantharshit00/vim-prisma'
+
 call plug#end()
 
 "---- Load Files ----
