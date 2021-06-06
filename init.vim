@@ -17,6 +17,8 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
 Plug 'Rigellute/shades-of-purple.vim'
+Plug 'dracula/vim'
+Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 
 "Telescope
 Plug 'nvim-lua/popup.nvim'
@@ -61,6 +63,8 @@ Plug 'voldikss/vim-floaterm'
 Plug 'cespare/vim-toml'
 
 Plug 'pantharshit00/vim-prisma'
+
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 

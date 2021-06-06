@@ -12,5 +12,5 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'gitbranch#name'
       \ },
-      \ 'colorscheme': 'shades_of_purple'
+      \ 'colorscheme': 'spaceduck'
       \ }

@@ -6,11 +6,13 @@
 			"args": ["--stdio"]
 		},
 		"golang": {
-			"command": "gopls",
-			"rootPatterns": ["go.mod"],
-			"disableWorkspaceFolders": true,
-			"filetypes": ["go"]
-		},
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    },
 		"lua": {
 			"command": "lua-lsp",
 			"filetypes": ["lua"]
