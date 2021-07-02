@@ -33,4 +33,4 @@ nnoremap tl :tabprev<CR>
 nnoremap tn :tabnew<CR>
 
 "Open netrw
-map <leader>e :Explore<CR>
+nnoremap <leader>rt :Explore<CR>

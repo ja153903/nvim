@@ -2,8 +2,7 @@
 "let g:airline#extensions#tabline#enabled = 1
 "let g:airline_powerline_fonts = 1
 "
-let g:shades_of_purple_airline = 1
-
+let g:rigel_lightline = 1
 let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
@@ -12,5 +11,5 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'gitbranch#name'
       \ },
-      \ 'colorscheme': 'spaceduck'
+      \ 'colorscheme': 'rigel'
       \ }
