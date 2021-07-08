@@ -19,7 +19,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'morhetz/gruvbox'
 Plug 'GlennLeo/cobalt2'
-
+Plug 'sainnhe/sonokai'
 
 "Telescope
 Plug 'nvim-lua/popup.nvim'
