@@ -21,7 +21,9 @@ endif
 "let ayucolor="dark"
 "colorscheme iceberg
 "let g:seoul256_background = 234
-colo cobalt2
+let g:sonokai_style = 'atlantis'
+let g:sonokai_enable_italic = 1
+colo sonokai
 
 "Set background
 set background=dark
