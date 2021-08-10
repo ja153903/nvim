@@ -17,14 +17,10 @@ if exists('+termguicolors')
 	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 	set termguicolors
 endif
-"Set colorscheme
-"let ayucolor="dark"
-"colorscheme iceberg
-"let g:seoul256_background = 234
-let g:sonokai_style = 'atlantis'
-let g:sonokai_enable_italic = 1
-colo sonokai
 
+colo everforest
+
+"
 "Set background
 set background=dark
 

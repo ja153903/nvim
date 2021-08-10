@@ -79,9 +79,9 @@ nvim_lsp.pyright.setup {
     python = {
       analysis = {
         extraPaths = {
-		"/Users/jaimeabbariao/Documents/bentobox/repos/bentobox/bentobox",
-		"/Users/jaimeabbariao/Documents/bentobox/repos/bentobox/bentobox/apps"
-	}
+					"/Users/jaimeabbariao/Documents/bentobox/repos/bentobox/bentobox",
+					"/Users/jaimeabbariao/Documents/bentobox/repos/bentobox/bentobox/apps"
+				}
       }
     }
   }

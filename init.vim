@@ -2,7 +2,6 @@ call plug#begin('~/.config/nvim/autoload/plug.vim')
 
 "Python LSP
 Plug 'davidhalter/jedi-vim'
-
 Plug 'Rigellute/rigel'
 
 "Automatically pair brackets
@@ -15,11 +14,10 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'
 
 "Themes
-Plug 'junegunn/seoul256.vim'
-Plug 'arcticicestudio/nord-vim'
-Plug 'morhetz/gruvbox'
-Plug 'GlennLeo/cobalt2'
-Plug 'sainnhe/sonokai'
+Plug 'wojciechkepka/vim-github-dark'
+Plug 'altercation/vim-colors-solarized'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'sainnhe/everforest'
 
 "Telescope
 Plug 'nvim-lua/popup.nvim'
@@ -27,11 +25,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-telescope/telescope-fzf-writer.nvim'
-
-
-"FzF because Telescope slow
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-"Plug 'junegunn/fzf.vim'
 
 "TreeSitter
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
