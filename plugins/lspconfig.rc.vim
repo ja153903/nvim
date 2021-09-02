@@ -65,6 +65,10 @@ local function get_python_path(workspace)
   return exepath('python3') or exepath('python') or 'python'
 end
 
+nvim_lsp.gopls.setup{
+	on_attach = on_attach,
+}
+
 nvim_lsp.pyright.setup { 
   on_attach = on_attach,
   before_init = function(_, config)

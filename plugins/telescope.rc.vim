@@ -8,7 +8,7 @@ require('telescope').setup {
       case_mode = "smart_case"
     },
 		fzf_writer = {
-			minimum_grep_characters = 5
+			minimum_grep_characters = 3
 		}
   }
 }

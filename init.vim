@@ -55,8 +55,6 @@ Plug 'cespare/vim-toml'
 
 Plug 'pantharshit00/vim-prisma'
 
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
 Plug 'neovim/nvim-lspconfig'
 
 Plug 'glepnir/lspsaga.nvim'
