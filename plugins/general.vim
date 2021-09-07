@@ -18,7 +18,7 @@ if exists('+termguicolors')
 	set termguicolors
 endif
 
-colo nord
+"colo nord
 
 "
 "Set background

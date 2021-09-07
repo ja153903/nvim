@@ -4,9 +4,6 @@ call plug#begin('~/.config/nvim/autoload/plug.vim')
 Plug 'davidhalter/jedi-vim'
 Plug 'Rigellute/rigel'
 
-"Automatically pair brackets
-Plug 'jiangmiao/auto-pairs'
-
 "Commenting Plugin
 Plug 'scrooloose/nerdcommenter'
 
