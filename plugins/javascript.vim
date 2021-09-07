@@ -28,4 +28,8 @@ autocmd FileType vue set sw=2
 autocmd FileType vue set ts=2
 autocmd FileType vue set sts=2
 
+autocmd FileType elm set sw=2
+autocmd FileType elm set ts=2
+autocmd FileType elm set sts=2
+
 let g:javascript_plugin_jsdoc = 1

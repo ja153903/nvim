@@ -18,7 +18,7 @@ if exists('+termguicolors')
 	set termguicolors
 endif
 
-colo everforest
+colo nord
 
 "
 "Set background
@@ -36,3 +36,5 @@ set relativenumber
 set rnu
 
 set noswapfile
+
+set mouse=a

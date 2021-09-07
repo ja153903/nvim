@@ -14,10 +14,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'
 
 "Themes
-Plug 'wojciechkepka/vim-github-dark'
-Plug 'altercation/vim-colors-solarized'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'sainnhe/everforest'
+Plug 'arcticicestudio/nord-vim'
 
 "Telescope
 Plug 'nvim-lua/popup.nvim'

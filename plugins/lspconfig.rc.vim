@@ -85,9 +85,14 @@ nvim_lsp.pyright.setup {
         extraPaths = {
 					"/Users/jaimeabbariao/Documents/bentobox/repos/bentobox/bentobox",
 					"/Users/jaimeabbariao/Documents/bentobox/repos/bentobox/bentobox/apps"
-				}
+				},
+				typeCheckingMode = "off"
       }
     }
   }
 }
+
+nvim_lsp.elmls.setup{}
+
+nvim_lsp.rust_analyzer.setup{}
 EOF
