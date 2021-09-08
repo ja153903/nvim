@@ -2,53 +2,41 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
-Plug 'davidhalter/jedi-vim'
+-- Essentials
+Plug('nvim-treesitter/nvim-treesitter', { ['do'] =':TSUpdate' })
+Plug 'neovim/nvim-lspconfig'
+Plug 'glepnir/lspsaga.nvim'
+Plug 'nvim-lua/completion-nvim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'wellle/context.vim'
+Plug 'hoob3rt/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 
+-- Formatting
 Plug 'scrooloose/nerdcommenter'
-
 Plug 'sbdchd/neoformat'
 
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'arcticicestudio/nord-vim'
-
+-- Telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'make' })
 Plug 'nvim-telescope/telescope-fzf-writer.nvim'
 
-Plug('nvim-treesitter/nvim-treesitter', { ['do'] =':TSUpdate' })
-
+-- Git
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'itchyny/vim-gitbranch'
 
+-- JavaScript and TypeScript
 Plug 'yuezk/vim-js'
 Plug 'leafgarland/typescript-vim'
-
 Plug 'maxmellon/vim-jsx-pretty'
-
+Plug 'pantharshit00/vim-prisma'
 Plug 'jparise/vim-graphql'
 
-Plug 'rust-lang/rust.vim'
-
-Plug 'wellle/context.vim'
-
+-- Python
+Plug 'davidhalter/jedi-vim'
 Plug 'cespare/vim-toml'
-
-Plug 'pantharshit00/vim-prisma'
-
-Plug 'neovim/nvim-lspconfig'
-
-Plug 'glepnir/lspsaga.nvim'
-
-Plug 'nvim-lua/completion-nvim'
-
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
-Plug 'hoob3rt/lualine.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
 
 vim.call('plug#end')
 
