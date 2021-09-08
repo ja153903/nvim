@@ -7,3 +7,7 @@ vim.cmd [[
 ]]
 
 vim.opt.background = 'dark'
+
+-- Ayu Theme
+vim.cmd 'let ayucolor = "dark"'
+vim.cmd 'colorscheme ayu'

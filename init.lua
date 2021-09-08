@@ -5,8 +5,7 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 -- Essentials
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] =':TSUpdate' })
 Plug 'neovim/nvim-lspconfig'
-Plug 'glepnir/lspsaga.nvim'
-Plug 'nvim-lua/completion-nvim'
+Plug 'glepnir/lspsaga.nvim' Plug 'nvim-lua/completion-nvim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'wellle/context.vim'
@@ -37,6 +36,9 @@ Plug 'jparise/vim-graphql'
 -- Python
 Plug 'davidhalter/jedi-vim'
 Plug 'cespare/vim-toml'
+
+-- Colorschemes
+Plug 'ayu-theme/ayu-vim'
 
 vim.call('plug#end')
 
