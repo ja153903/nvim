@@ -61,18 +61,19 @@ Plug 'honza/vim-snippets'
 
 call plug#end()
 
+"---- Load Lua Files ----
+lua require('lsp_config')
+lua require('saga')
+lua require('filetypes')
+lua require('telescope_config')
+
 "---- Load Files ----
 source ~/.config/nvim/plugins/general.vim
 source ~/.config/nvim/plugins/keymapping.vim
-source ~/.config/nvim/plugins/python.vim
 source ~/.config/nvim/plugins/airline.vim
 source ~/.config/nvim/plugins/neoformat.vim
 source ~/.config/nvim/plugins/jedi.vim
 source ~/.config/nvim/plugins/javascript.vim
-source ~/.config/nvim/plugins/markup.vim
 source ~/.config/nvim/plugins/context.vim
-source ~/.config/nvim/plugins/lspconfig.rc.vim
 source ~/.config/nvim/plugins/completion.rc.vim
-source ~/.config/nvim/plugins/lspsaga.rc.vim
-source ~/.config/nvim/plugins/telescope.rc.vim
 source ~/.config/nvim/plugins/telescope.vim

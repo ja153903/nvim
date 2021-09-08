@@ -1,5 +1,6 @@
-lua << EOF
-require('telescope').setup {
+local telescope = require('telescope')
+
+telescope.setup {
   extensions={
     fzf = {
       fuzzy = true,
@@ -12,6 +13,6 @@ require('telescope').setup {
 		}
   }
 }
-require('telescope').load_extension('fzf')
-require('telescope').load_extension('fzf_writer')
-EOF
+
+telescope.load_extension('fzf')
+telescope.load_extension('fzf_writer')
