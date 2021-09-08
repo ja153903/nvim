@@ -3,7 +3,6 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
 Plug 'davidhalter/jedi-vim'
-Plug 'Rigellute/rigel'
 
 Plug 'scrooloose/nerdcommenter'
 
@@ -34,7 +33,6 @@ Plug 'jparise/vim-graphql'
 Plug 'rust-lang/rust.vim'
 
 Plug 'wellle/context.vim'
-Plug 'itchyny/lightline.vim'
 
 Plug 'cespare/vim-toml'
 
@@ -49,19 +47,17 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+Plug 'hoob3rt/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+
 vim.call('plug#end')
 
-require('lsp_config')
-require('saga')
+require('colors')
+require('general_settings')
+require('keymapping')
+require('lspconfigrc')
+require('lspsagarc')
 require('filetypes')
-require('telescope_config')
-
-vim.cmd 'source ~/.config/nvim/plugins/general.vim'
-vim.cmd 'source ~/.config/nvim/plugins/keymapping.vim'
-vim.cmd 'source ~/.config/nvim/plugins/airline.vim'
-vim.cmd 'source ~/.config/nvim/plugins/neoformat.vim'
-vim.cmd 'source ~/.config/nvim/plugins/jedi.vim'
-vim.cmd 'source ~/.config/nvim/plugins/javascript.vim'
-vim.cmd 'source ~/.config/nvim/plugins/context.vim'
-vim.cmd 'source ~/.config/nvim/plugins/completion.rc.vim'
-vim.cmd 'source ~/.config/nvim/plugins/telescope.vim'
+require('telescoperc')
+require('pluginsrc')
+require('completionrc')
