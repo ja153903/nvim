@@ -32,6 +32,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'pantharshit00/vim-prisma'
 Plug 'jparise/vim-graphql'
+Plug('evanleck/vim-svelte', { ['branch'] = 'main' })
 
 -- Python
 Plug 'davidhalter/jedi-vim'

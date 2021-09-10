@@ -63,4 +63,8 @@ vim.cmd [[
 	autocmd FileType elm set sw=2
 	autocmd FileType elm set ts=2
 	autocmd FileType elm set sts=2
+
+	autocmd FileType svelte set sw=2
+	autocmd FileType svelte set ts=2
+	autocmd FileType svelte set sts=2
 ]]
