@@ -42,6 +42,9 @@ Plug 'cespare/vim-toml'
 -- Colorschemes
 Plug 'ayu-theme/ayu-vim'
 
+-- Floaterm
+Plug 'voldikss/vim-floaterm'
+
 vim.call('plug#end')
 
 require('colors')

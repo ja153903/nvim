@@ -39,8 +39,8 @@ map('n', 'gp', "<cmd>lua require'lspsaga.provider'.preview_definition()<CR>", op
 map('n', '<leader>cd', "<cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>", opts)
 map('n', '[e', "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>", opts)
 map('n', ']e', "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>", opts)
-map('n', '<leader>tt', ":Lspsaga open_floaterm<CR>", opts)
-map('t', '<leader>tk' , "<C-\\><C-n>:Lspsaga close_floaterm<CR>", opts)
+--map('n', '<leader>tt', ":Lspsaga open_floaterm<CR>", opts)
+--map('t', '<leader>tk' , "<C-\\><C-n>:Lspsaga close_floaterm<CR>", opts)
 
 -- Telescope
 vim.cmd 'nnoremap <leader>fi <cmd>Telescope find_files<cr>'
@@ -51,3 +51,9 @@ vim.cmd 'nnoremap <leader>fh <cmd>Telescope help_tags<cr>'
 -- Netrw
 vim.cmd 'nmap <silent> gx :!open <cWORD><cr>'
 
+-- Floaterm
+map('n', '<leader>tt', ":FloatermNew<CR>", opts)
+map('t', '<leader>tt', "<C-\\><C-n>:FloatermNew<CR>", opts)
+map('n', '<leader>th', ':FloatermToggle<CR>', opts)
+map('t', '<leader>th', '<C-\\><C-n>:FloatermToggle<CR>', opts)
+map('t', '<leader>tk', '<C-\\><C-n>:FloatermKill<CR>', opts)
