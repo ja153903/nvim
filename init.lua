@@ -45,8 +45,12 @@ Plug 'ayu-theme/ayu-vim'
 -- Floaterm
 Plug 'voldikss/vim-floaterm'
 
+-- Impatient
+Plug 'lewis6991/impatient.nvim'
+
 vim.call('plug#end')
 
+require('impatient')
 require('colors')
 require('general_settings')
 require('keymapping')
