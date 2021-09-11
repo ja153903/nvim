@@ -41,6 +41,7 @@ Plug 'cespare/vim-toml'
 
 -- Colorschemes
 Plug 'ayu-theme/ayu-vim'
+Plug 'morhetz/gruvbox'
 
 -- Floaterm
 Plug 'voldikss/vim-floaterm'
