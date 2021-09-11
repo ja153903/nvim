@@ -24,3 +24,8 @@ require('lualine').setup{
 	options = {theme = 'ayu_dark'},
 	sections = { lualine_c = {{'filename', path = 2}} }
 }
+
+-- nvim-transparent
+require('transparent').setup {
+	enable = true
+}

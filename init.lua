@@ -48,6 +48,9 @@ Plug 'voldikss/vim-floaterm'
 -- Impatient
 Plug 'lewis6991/impatient.nvim'
 
+-- nvim-transparent
+Plug 'xiyaowong/nvim-transparent'
+
 vim.call('plug#end')
 
 require('impatient')
