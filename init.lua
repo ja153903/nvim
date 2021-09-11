@@ -5,7 +5,8 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 -- Essentials
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] =':TSUpdate' })
 Plug 'neovim/nvim-lspconfig'
-Plug 'glepnir/lspsaga.nvim' Plug 'nvim-lua/completion-nvim'
+Plug 'glepnir/lspsaga.nvim'
+Plug 'nvim-lua/completion-nvim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'wellle/context.vim'
