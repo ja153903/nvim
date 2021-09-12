@@ -44,7 +44,7 @@ map('n', ']e', "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<
 
 -- Telescope
 vim.cmd 'nnoremap <leader>fi <cmd>Telescope find_files<cr>'
-vim.cmd 'nnoremap <leader>rg <cmd>Telescope fzf_writer staged_grep<cr>'
+vim.cmd 'nnoremap <leader>rg <cmd>Telescope live_grep<cr>'
 vim.cmd 'nnoremap <leader>fb <cmd>Telescope buffers<cr>'
 vim.cmd 'nnoremap <leader>fh <cmd>Telescope help_tags<cr>'
 

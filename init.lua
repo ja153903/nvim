@@ -21,8 +21,8 @@ Plug 'sbdchd/neoformat'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'make' })
-Plug 'nvim-telescope/telescope-fzf-writer.nvim'
+-- Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'make' })
+-- Plug 'nvim-telescope/telescope-fzf-writer.nvim'
 
 -- Git
 Plug 'airblade/vim-gitgutter'
