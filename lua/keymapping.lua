@@ -24,7 +24,7 @@ map('n', 'th', ':tabnext<CR>', opts)
 map('n', 'tn', ':tabnew<CR>', opts)
 
 -- Tree Exploration
-map('n', '<leader>rt', ':Explore<CR>', opts)
+map('n', '<leader>e', ':Explore<CR>', opts)
 
 -- LspSaga
 map('n', 'gh', "<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>", opts)
