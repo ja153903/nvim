@@ -9,8 +9,14 @@ vim.cmd [[
 vim.opt.background = 'dark'
 
 -- Ayu Theme
---vim.cmd 'let ayucolor = "dark"'
---vim.cmd 'colorscheme ayu'
+-- vim.cmd 'let ayucolor = "dark"'
+-- vim.cmd 'colorscheme ayu'
 
 -- Gruvbox
-vim.cmd 'colorscheme gruvbox'
+-- vim.cmd 'colorscheme gruvbox'
+
+-- uwu.vim
+-- vim.cmd 'colorscheme uwu'
+
+-- lucario
+vim.cmd 'colorscheme lucario'
