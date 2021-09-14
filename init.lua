@@ -24,6 +24,7 @@ Plug 'nvim-telescope/telescope.nvim'
 
 -- Git
 Plug 'airblade/vim-gitgutter'
+Plug 'f-person/git-blame.nvim'
 
 -- JavaScript and TypeScript
 Plug 'yuezk/vim-js'
