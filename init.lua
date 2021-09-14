@@ -40,8 +40,6 @@ Plug 'cespare/vim-toml'
 
 -- Colorschemes
 Plug 'ayu-theme/ayu-vim'
-Plug 'morhetz/gruvbox'
-Plug 'Mangeshrex/uwu.vim'
 Plug 'raphamorim/lucario'
 
 -- Floaterm
