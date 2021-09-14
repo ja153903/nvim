@@ -9,6 +9,8 @@ vim.cmd 'map <leader>cp :%y+<CR>'
 vim.cmd 'map <leader>h :sp<cr>'
 vim.cmd 'map <leader>v :vsp<CR>'
 
+vim.cmd 'nnoremap <leader>sv :source $MYVIMRC<CR>'
+
 -- Tab Management
 map('n', '<leader>1', '1gt', opts)
 map('n', '<leader>2', '2gt', opts)
