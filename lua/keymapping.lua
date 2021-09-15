@@ -30,8 +30,8 @@ map('n', '<leader>e', ':Explore<CR>', opts)
 
 -- LspSaga
 map('n', 'gh', "<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>", opts)
-map('n', '<leader>ca', "<cmd>lua require('lspsaga.codeaction').code_action()<CR>", opts)
-map('v', '<leader>ca', ":<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>", opts)
+map('n', '<leader>re', "<cmd>lua require('lspsaga.codeaction').code_action()<CR>", opts)
+map('v', '<leader>re', ":<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>", opts)
 map('n', 'K', "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>", opts)
 map('n', '<C-f>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", opts)
 map('n', '<C-b>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", opts)
