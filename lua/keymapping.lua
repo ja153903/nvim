@@ -45,6 +45,7 @@ vim.cmd 'nnoremap <leader>fi <cmd>Telescope find_files<cr>'
 vim.cmd 'nnoremap <leader>rg <cmd>Telescope live_grep<cr>'
 vim.cmd 'nnoremap <leader>fb <cmd>Telescope buffers<cr>'
 vim.cmd 'nnoremap <leader>fh <cmd>Telescope help_tags<cr>'
+map('n', '<leader>fb', '<cmd>Telescope file_browser<cr>', opts)
 
 -- Netrw
 vim.cmd 'nmap <silent> gx :!open <cWORD><cr>'
