@@ -29,3 +29,8 @@ require('lualine').setup{
 require('transparent').setup {
 	enable = true
 }
+
+-- bufferline
+vim.opt.termguicolors = true
+require("bufferline").setup{}
+
