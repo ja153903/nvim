@@ -11,7 +11,8 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'wellle/context.vim'
 Plug 'hoob3rt/lualine.nvim'
-Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
+
 
 -- Formatting
 Plug 'scrooloose/nerdcommenter'
