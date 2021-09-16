@@ -15,11 +15,6 @@ vim.cmd 'nnoremap <leader>sv :source $MYVIMRC<CR>'
 for i = 1, 9 do
 	map('n', string.format('<leader>%i', i), string.format('%igt', i), opts)
 end
---map('n', '<leader>1', '1gt', opts)
---map('n', '<leader>2', '2gt', opts)
---map('n', '<leader>3', '3gt', opts)
---map('n', '<leader>4', '4gt', opts)
---map('n', '<leader>5', '5gt', opts)
 
 map('n', 'tl', ':tabprev<CR>', opts)
 map('n', 'tt', ':tabedit<Space>', opts)
