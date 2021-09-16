@@ -67,4 +67,8 @@ vim.cmd [[
 	autocmd FileType svelte set sw=2
 	autocmd FileType svelte set ts=2
 	autocmd FileType svelte set sts=2
+
+	autocmd FileType lua set sw=2
+	autocmd FileType lua set ts=2
+	autocmd FileType lua set sts=2
 ]]

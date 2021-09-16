@@ -1,5 +1,6 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true }
+local fmt = string.format
 
 vim.g.mapleader = " "
 
@@ -13,7 +14,7 @@ vim.cmd 'nnoremap <leader>sv :source $MYVIMRC<CR>'
 
 -- Tab Management
 for i = 1, 9 do
-	map('n', string.format('<leader>%i', i), string.format('%igt', i), opts)
+  map('n', fmt('<leader>%i', i), fmt('%igt', i), opts)
 end
 
 map('n', 'tl', ':tabprev<CR>', opts)
@@ -41,14 +42,14 @@ map('n', '[e', "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<
 map('n', ']e', "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>", opts)
 
 -- Telescope
-vim.cmd 'nnoremap <leader>fi <cmd>Telescope find_files<cr>'
-vim.cmd 'nnoremap <leader>rg <cmd>Telescope live_grep<cr>'
-vim.cmd 'nnoremap <leader>fb <cmd>Telescope buffers<cr>'
-vim.cmd 'nnoremap <leader>fh <cmd>Telescope help_tags<cr>'
+map('n', '<leader>fi', '<cmd>Telescope find_files<cr>', opts)
+map('n', '<leader>rg', '<cmd>Telescope live_grep<cr>', opts)
+map('n', '<leader>br', '<cmd>Telescope buffers<cr>', opts)
+map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', opts)
 map('n', '<leader>fb', '<cmd>Telescope file_browser<cr>', opts)
 
 -- Netrw
-vim.cmd 'nmap <silent> gx :!open <cWORD><cr>'
+map('n', '<silent> gx', ':!open <cWORD><cr>', {})
 
 -- Floaterm
 map('n', '<leader>tt', ":FloatermNew<CR>", opts)
