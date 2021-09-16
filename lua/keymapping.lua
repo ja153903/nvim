@@ -12,11 +12,14 @@ vim.cmd 'map <leader>v :vsp<CR>'
 vim.cmd 'nnoremap <leader>sv :source $MYVIMRC<CR>'
 
 -- Tab Management
-map('n', '<leader>1', '1gt', opts)
-map('n', '<leader>2', '2gt', opts)
-map('n', '<leader>3', '3gt', opts)
-map('n', '<leader>4', '4gt', opts)
-map('n', '<leader>5', '5gt', opts)
+for i = 1, 9 do
+	map('n', string.format('<leader>%i', i), string.format('%igt', i), opts)
+end
+--map('n', '<leader>1', '1gt', opts)
+--map('n', '<leader>2', '2gt', opts)
+--map('n', '<leader>3', '3gt', opts)
+--map('n', '<leader>4', '4gt', opts)
+--map('n', '<leader>5', '5gt', opts)
 
 map('n', 'tl', ':tabprev<CR>', opts)
 map('n', 'tt', ':tabedit<Space>', opts)
@@ -30,19 +33,17 @@ map('n', '<leader>e', ':Explore<CR>', opts)
 
 -- LspSaga
 map('n', 'gh', "<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>", opts)
-map('n', '<leader>re', "<cmd>lua require('lspsaga.codeaction').code_action()<CR>", opts)
-map('v', '<leader>re', ":<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>", opts)
+map('n', '<leader>we', "<cmd>lua require('lspsaga.codeaction').code_action()<CR>", opts)
+map('v', '<leader>we', ":<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>", opts)
 map('n', 'K', "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>", opts)
 map('n', '<C-f>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", opts)
 map('n', '<C-b>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", opts)
 map('n', 'gs', "<cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>", opts)
 map('n', 'gr', "<cmd>lua require('lspsaga.rename').rename()<CR>", opts)
 map('n', 'gp', "<cmd>lua require'lspsaga.provider'.preview_definition()<CR>", opts)
-map('n', '<leader>cd', "<cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>", opts)
+map('n', '<leader>sd', "<cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>", opts)
 map('n', '[e', "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>", opts)
 map('n', ']e', "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>", opts)
---map('n', '<leader>tt', ":Lspsaga open_floaterm<CR>", opts)
---map('t', '<leader>tk' , "<C-\\><C-n>:Lspsaga close_floaterm<CR>", opts)
 
 -- Telescope
 vim.cmd 'nnoremap <leader>fi <cmd>Telescope find_files<cr>'
