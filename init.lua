@@ -13,7 +13,6 @@ Plug 'wellle/context.vim'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
-
 -- Formatting
 Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'
@@ -52,6 +51,7 @@ Plug 'lewis6991/impatient.nvim'
 -- nvim-transparent
 Plug 'xiyaowong/nvim-transparent'
 
+-- bufferline.nvim
 Plug 'akinsho/bufferline.nvim'
 
 vim.call('plug#end')

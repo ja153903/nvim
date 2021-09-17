@@ -13,10 +13,6 @@ vim.cmd 'map <leader>v :vsp<CR>'
 vim.cmd 'nnoremap <leader>sv :source $MYVIMRC<CR>'
 
 -- Tab Management
-for i = 1, 9 do
-  map('n', fmt('<leader>%i', i), fmt('%igt', i), opts)
-end
-
 map('n', 'tl', ':tabprev<CR>', opts)
 map('n', 'tt', ':tabedit<Space>', opts)
 map('n', 'tm', ':tabm<Space>', opts)
@@ -59,3 +55,7 @@ map('t', '<leader>th', '<C-\\><C-n>:FloatermToggle<CR>', opts)
 map('t', '<leader>tk', '<C-\\><C-n>:FloatermKill<CR>', opts)
 map('t', '<leader>tn', "<C-\\><C-n>:FloatermNext<CR>", opts)
 map('t', '<leader>tp', "<C-\\><C-n>:FloatermPrev<CR>", opts)
+
+-- bufferline.nvim
+map('n', '<leader>1', ':BufferLineCycleNext<CR>', opts)
+map('n', '<leader>2', ':BufferLineCyclePrev<CR>', opts)
