@@ -30,4 +30,5 @@ require('transparent').setup {
 	enable = true
 }
 
+vim.opt.termguicolors = true
 require('bufferline').setup {}
