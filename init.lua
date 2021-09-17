@@ -51,7 +51,6 @@ Plug 'lewis6991/impatient.nvim'
 -- nvim-transparent
 Plug 'xiyaowong/nvim-transparent'
 
--- bufferline.nvim
 Plug 'akinsho/bufferline.nvim'
 
 vim.call('plug#end')
