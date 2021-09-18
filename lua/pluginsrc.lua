@@ -21,7 +21,7 @@ vim.cmd 'autocmd BufWritePre *.{js,ts,jsx,tsx} Neoformat'
 
 -- LuaLine
 require('lualine').setup{
-	options = {theme = 'horizon'},
+	options = {theme = 'ayu_mirage'},
 	sections = { lualine_c = {{'filename', path = 2}} }
 }
 
