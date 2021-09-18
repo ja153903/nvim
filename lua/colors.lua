@@ -9,4 +9,4 @@ vim.cmd [[
 vim.opt.background = 'dark'
 
 -- lucario
-vim.cmd 'colorscheme lucario'
+vim.cmd 'colorscheme nightfox'

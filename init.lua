@@ -41,6 +41,7 @@ Plug 'cespare/vim-toml'
 -- Colorschemes
 Plug 'ayu-theme/ayu-vim'
 Plug 'raphamorim/lucario'
+Plug 'EdenEast/nightfox.nvim'
 
 -- Floaterm
 Plug 'voldikss/vim-floaterm'
