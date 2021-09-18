@@ -55,6 +55,8 @@ Plug 'xiyaowong/nvim-transparent'
 -- bufferline.nvim
 Plug 'akinsho/bufferline.nvim'
 
+Plug 'lukas-reineke/indent-blankline.nvim'
+
 vim.call('plug#end')
 
 require('impatient')
