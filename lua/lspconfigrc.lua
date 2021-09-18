@@ -76,7 +76,7 @@ nvim_lsp.pyright.setup {
   }
 }
 
-nvim_lsp.elmls.setup{}
+nvim_lsp.elmls.setup{ on_attach = on_attach }
 
 nvim_lsp.rust_analyzer.setup{ on_attach = on_attach }
 
@@ -113,4 +113,3 @@ nvim_lsp.sumneko_lua.setup {
         },
     },
 }
-
