@@ -27,7 +27,7 @@ require('lualine').setup{
 
 -- nvim-transparent
 require('transparent').setup {
-	enable = true
+	enable = false
 }
 
 vim.opt.termguicolors = true

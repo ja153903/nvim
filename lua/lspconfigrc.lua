@@ -53,7 +53,7 @@ nvim_lsp.gopls.setup{
 	on_attach = on_attach,
 }
 
-nvim_lsp.pyright.setup { 
+nvim_lsp.pyright.setup {
   on_attach = on_attach,
   before_init = function(_, config)
     config.settings.python.pythonPath = get_python_path(config.root_dir)
@@ -78,7 +78,7 @@ nvim_lsp.pyright.setup {
 
 nvim_lsp.elmls.setup{}
 
-nvim_lsp.rust_analyzer.setup{}
+nvim_lsp.rust_analyzer.setup{ on_attach = on_attach }
 
 local sumneko_binary_path = vim.fn.exepath('lua-language-server')
 local sumneko_root_path = vim.fn.fnamemodify(sumneko_binary_path, ':h:h:h')
@@ -88,6 +88,7 @@ table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
 nvim_lsp.sumneko_lua.setup {
+		on_attach = on_attach,
     cmd = {sumneko_binary_path, "-E", sumneko_root_path .. "/main.lua"};
     settings = {
         Lua = {
