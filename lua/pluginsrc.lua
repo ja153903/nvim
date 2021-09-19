@@ -33,10 +33,6 @@ require('transparent').setup {
 vim.opt.termguicolors = true
 require('bufferline').setup {}
 
-vim.opt.listchars = {
-	eol = "↴",
-}
-
 require("indent_blankline").setup {
 	buftype_exclude = {"terminal"},
 	show_end_of_line = true
