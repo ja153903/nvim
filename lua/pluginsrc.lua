@@ -33,11 +33,6 @@ require('transparent').setup {
 vim.opt.termguicolors = true
 require('bufferline').setup {}
 
-require("indent_blankline").setup {
-	buftype_exclude = {"terminal"},
-	show_end_of_line = true
-}
-
 local nightfox = require('nightfox')
 nightfox.setup {
 	  fox = "nordfox", -- change the colorscheme to use nordfox
