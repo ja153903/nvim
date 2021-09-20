@@ -38,3 +38,14 @@ require("indent_blankline").setup {
 	show_end_of_line = true
 }
 
+local nightfox = require('nightfox')
+nightfox.setup {
+	  fox = "nordfox", -- change the colorscheme to use nordfox
+		styles = {
+			comments = "italic", -- change style of comments to be italic
+			keywords = "bold", -- change style of keywords to be bold
+			functions = "italic,bold" -- styles can be a comma separated list
+		},
+		transparent = true
+}
+nightfox.load()
