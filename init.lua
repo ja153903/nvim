@@ -57,7 +57,7 @@ vim.call('plug#end')
 
 require('impatient')
 require('colors')
-require('general_settings')
+require('settings')
 require('keymapping')
 require('lspconfigrc')
 require('lspsagarc')
