@@ -11,12 +11,13 @@ require('packer').startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'neovim/nvim-lspconfig'
   use 'nvim-lua/completion-nvim'
-  use 'SirVer/ultisnips'
-  use 'honza/vim-snippets'
   use 'wellle/context.vim'
   use 'hoob3rt/lualine.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'glepnir/lspsaga.nvim'
+	use 'SirVer/ultisnips'
+	use 'honza/vim-snippets'
+
 	-- Formatting
   use 'scrooloose/nerdcommenter'
   use 'sbdchd/neoformat'
@@ -35,7 +36,7 @@ require('packer').startup(function(use)
   use 'maxmellon/vim-jsx-pretty'
   use 'pantharshit00/vim-prisma'
   use 'jparise/vim-graphql'
-  -- python 
+  -- python
   use 'davidhalter/jedi-vim'
   use 'cespare/vim-toml'
   -- themes

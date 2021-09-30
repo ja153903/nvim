@@ -27,7 +27,6 @@ nvim_lsp.tsserver.setup {
 }
 
 local util = require("lspconfig/util")
-local configs = require("lspconfig/configs")
 
 local path = util.path
 
