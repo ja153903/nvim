@@ -1,59 +1,53 @@
-local Plug = vim.fn['plug#']
+local fn = vim.fn
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+  fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+  vim.cmd 'packadd packer.nvim'
+end
 
-vim.call('plug#begin', '~/.config/nvim/plugged')
+require('packer').startup(function()
+  use 'wbthomason/packer.nvim'
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'neovim/nvim-lspconfig'
+  use 'nvim-lua/completion-nvim'
+  use 'SirVer/ultisnips'
+  use 'honza/vim-snippets'
+  use 'wellle/context.vim'
+  use 'hoob3rt/lualine.nvim'
+  use 'kyazdani42/nvim-web-devicons'
+  use 'glepnir/lspsaga.nvim'
 
--- Essentials
-Plug('nvim-treesitter/nvim-treesitter', { ['do'] =':TSUpdate' })
-Plug 'neovim/nvim-lspconfig'
-Plug 'glepnir/lspsaga.nvim'
-Plug 'nvim-lua/completion-nvim'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'wellle/context.vim'
-Plug 'hoob3rt/lualine.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
+  use 'scrooloose/nerdcommenter'
+  use 'sbdchd/neoformat'
+  
+  use 'nvim-lua/popup.nvim'
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
--- Formatting
-Plug 'scrooloose/nerdcommenter'
-Plug 'sbdchd/neoformat'
+  use 'airblade/vim-gitgutter'
+  use 'f-person/git-blame.nvim'
 
--- Telescope
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+  use 'yuezk/vim-js'
+  use 'leafgarland/typescript-vim'
+  use 'maxmellon/vim-jsx-pretty'
+  use 'pantharshit00/vim-prisma'
+  use 'jparise/vim-graphql'
+  
+  use 'davidhalter/jedi-vim'
+  use 'cespare/vim-toml'
 
--- Git
-Plug 'airblade/vim-gitgutter'
-Plug 'f-person/git-blame.nvim'
+  use 'EdenEast/nightfox.nvim'
+  
+  use 'voldikss/vim-floaterm'
 
--- JavaScript and TypeScript
-Plug 'yuezk/vim-js'
-Plug 'leafgarland/typescript-vim'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'pantharshit00/vim-prisma'
-Plug 'jparise/vim-graphql'
-Plug('evanleck/vim-svelte', { ['branch'] = 'main' })
+  use 'lewis6991/impatient.nvim'
 
--- Python
-Plug 'davidhalter/jedi-vim'
-Plug 'cespare/vim-toml'
+  use 'xiyaowong/nvim-transparent'
 
--- Colorschemes
-Plug 'EdenEast/nightfox.nvim'
-
--- Floaterm
-Plug 'voldikss/vim-floaterm'
-
--- Impatient
-Plug 'lewis6991/impatient.nvim'
-
--- nvim-transparent
-Plug 'xiyaowong/nvim-transparent'
-
--- bufferline.nvim
-Plug 'akinsho/bufferline.nvim'
-
-vim.call('plug#end')
+  use 'akinsho/bufferline.nvim'
+end)
 
 require('impatient')
 require('colors')
