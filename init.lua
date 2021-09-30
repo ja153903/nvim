@@ -17,7 +17,6 @@ require('packer').startup(function(use)
   use 'glepnir/lspsaga.nvim'
 	use 'SirVer/ultisnips'
 	use 'honza/vim-snippets'
-
 	-- Formatting
   use 'scrooloose/nerdcommenter'
   use 'sbdchd/neoformat'
