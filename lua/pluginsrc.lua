@@ -44,3 +44,5 @@ nightfox.setup {
 		transparent = true
 }
 nightfox.load()
+
+require('dapui').setup()

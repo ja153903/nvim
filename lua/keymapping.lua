@@ -59,3 +59,8 @@ map('n', '<leader>2', ':BufferLineCyclePrev<CR>', opts)
 
 -- Closing buffers
 map('n', 'bd', ':bd<cr>', opts)
+
+-- dapui
+map('n', '<leader>dpo', '<cmd>lua require("dapui").open()', opts)
+map('n', '<leader>dpc', '<cmd>lua require("dapui").close()', opts)
+map('n', '<leader>dpt', '<cmd>lua require("dapui").toggle()', opts)

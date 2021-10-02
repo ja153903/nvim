@@ -77,7 +77,7 @@ nvim_lsp.pyright.setup {
 
 nvim_lsp.elmls.setup{ on_attach = on_attach }
 
-require('rust-tools').setup({})
+nvim_lsp.rust_analyzer.setup{ on_attach = on_attach }
 
 local sumneko_binary_path = vim.fn.exepath('lua-language-server')
 local sumneko_root_path = vim.fn.fnamemodify(sumneko_binary_path, ':h:h:h')
