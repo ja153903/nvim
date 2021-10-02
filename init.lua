@@ -48,6 +48,8 @@ require('packer').startup(function(use)
   use 'xiyaowong/nvim-transparent'
   -- buffer
   use 'akinsho/bufferline.nvim'
+	-- rust
+	use 'simrat39/rust-tools.nvim'
 end)
 
 require('impatient')
