@@ -40,6 +40,7 @@ require('packer').startup(function(use)
   use 'cespare/vim-toml'
   -- themes
   use 'EdenEast/nightfox.nvim'
+	use 'folke/tokyonight.nvim'
   -- integrated terminal
   use 'voldikss/vim-floaterm'
   -- opt
