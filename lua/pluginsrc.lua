@@ -46,3 +46,9 @@ nightfox.setup {
 nightfox.load()
 
 require('dapui').setup()
+
+require('nvim-treesitter.configs').setup({
+	highlight = {
+		enable = true
+	}
+})

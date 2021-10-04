@@ -29,14 +29,8 @@ require('packer').startup(function(use)
   -- git
   use 'airblade/vim-gitgutter'
   use 'f-person/git-blame.nvim'
-  -- javascript
-  use 'yuezk/vim-js'
-  use 'leafgarland/typescript-vim'
-  use 'maxmellon/vim-jsx-pretty'
   use 'pantharshit00/vim-prisma'
   use 'jparise/vim-graphql'
-  -- python
-  use 'davidhalter/jedi-vim'
   use 'cespare/vim-toml'
   -- themes
   use 'EdenEast/nightfox.nvim'
