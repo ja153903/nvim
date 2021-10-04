@@ -1,16 +1,11 @@
--- JavasScript Plugin
-vim.g['javascript_plugin_jsdoc'] = 1
-
-vim.cmd 'autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart'
-vim.cmd 'autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear'
+vim.cmd 'autocmd BufEnter * :syntax sync fromstart'
+vim.cmd 'autocmd BufEnter * :syntax sync clear'
+--vim.cmd 'autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart'
+--vim.cmd 'autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear'
 
 -- Context.vim
 vim.g['context_nvim_no_redraw'] = 1
 vim.g['context_enabled'] = 0
-
--- Jedi.vim
-vim.g['jedi#completions_enabled'] = 0
-vim.g['jedi#use_splits_not_buffers'] = 'right'
 
 -- Neoformat
 vim.g['neoformat_basic_format_align'] = 1
@@ -48,6 +43,7 @@ nightfox.load()
 require('dapui').setup()
 
 require('nvim-treesitter.configs').setup({
+	ensure_installed = {'python', 'lua', 'rust', 'javascript', 'typescript'},
 	highlight = {
 		enable = true
 	}
