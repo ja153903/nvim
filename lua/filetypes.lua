@@ -1,6 +1,7 @@
 local fmt = string.format
 local filetype_configs = {
 	{ filename = "python", value = 4 },
+	{ filename = "rust", value = 4 },
 	{ filename = "html", value = 2 },
 	{ filename = "json", value = 2 },
 	{ filename = "yaml", value = 2 },
