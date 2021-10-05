@@ -1,52 +1,55 @@
 local map = vim.api.nvim_set_keymap
-local opts = { noremap = true }
+local opts = {noremap = true}
 
 vim.g.mapleader = " "
 
-map('i', 'jj', '<Esc>', opts)
+map("i", "jj", "<Esc>", opts)
 
-vim.cmd 'map <leader>cp :%y+<CR>'
-vim.cmd 'map <leader>h :sp<cr>'
-vim.cmd 'map <leader>v :vsp<CR>'
+vim.cmd "map <leader>cp :%y+<CR>"
+vim.cmd "map <leader>h :sp<cr>"
+vim.cmd "map <leader>v :vsp<CR>"
 
 -- Tab Management
-map('n', 'tl', ':tabprev<CR>', opts)
-map('n', 'tt', ':tabedit<Space>', opts)
-map('n', 'tm', ':tabm<Space>', opts)
-map('n', 'td', ':tabclose<CR>', opts)
-map('n', 'th', ':tabnext<CR>', opts)
-map('n', 'tn', ':tabnew<CR>', opts)
+map("n", "tl", ":tabprev<CR>", opts)
+map("n", "tt", ":tabedit<Space>", opts)
+map("n", "tm", ":tabm<Space>", opts)
+map("n", "td", ":tabclose<CR>", opts)
+map("n", "th", ":tabnext<CR>", opts)
+map("n", "tn", ":tabnew<CR>", opts)
 
 -- Tree Exploration
-map('n', '<leader>e', ':Explore<CR>', opts)
+map("n", "<leader>e", ":Explore<CR>", opts)
 
 -- Telescope
-map('n', '<leader>fi', ':lua require("telescope.builtin").find_files({ hidden = true })<cr>', opts)
-map('n', '<leader>rg', '<cmd>Telescope live_grep<cr>', opts)
-map('n', '<leader>br', '<cmd>Telescope buffers<cr>', opts)
-map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', opts)
-map('n', '<leader>fb', '<cmd>Telescope file_browser<cr>', opts)
+map("n", "<leader>fi", ':lua require("telescope.builtin").find_files({ hidden = true })<cr>', opts)
+map("n", "<leader>rg", "<cmd>Telescope live_grep<cr>", opts)
+map("n", "<leader>br", "<cmd>Telescope buffers<cr>", opts)
+map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
+map("n", "<leader>fb", "<cmd>Telescope file_browser<cr>", opts)
 
 -- Netrw
-map('n', '<silent> gx', ':!open <cWORD><cr>', {})
+map("n", "<silent> gx", ":!open <cWORD><cr>", {})
 
 -- Floaterm
-map('n', '<leader>tt', ":FloatermNew<CR>", opts)
-map('t', '<leader>tt', "<C-\\><C-n>:FloatermNew<CR>", opts)
-map('n', '<leader>th', ':FloatermToggle<CR>', opts)
-map('t', '<leader>th', '<C-\\><C-n>:FloatermToggle<CR>', opts)
-map('t', '<leader>tk', '<C-\\><C-n>:FloatermKill<CR>', opts)
-map('t', '<leader>tn', "<C-\\><C-n>:FloatermNext<CR>", opts)
-map('t', '<leader>tp', "<C-\\><C-n>:FloatermPrev<CR>", opts)
+map("n", "<leader>tt", ":FloatermNew<CR>", opts)
+map("t", "<leader>tt", "<C-\\><C-n>:FloatermNew<CR>", opts)
+map("n", "<leader>th", ":FloatermToggle<CR>", opts)
+map("t", "<leader>th", "<C-\\><C-n>:FloatermToggle<CR>", opts)
+map("t", "<leader>tk", "<C-\\><C-n>:FloatermKill<CR>", opts)
+map("t", "<leader>tn", "<C-\\><C-n>:FloatermNext<CR>", opts)
+map("t", "<leader>tp", "<C-\\><C-n>:FloatermPrev<CR>", opts)
 
 -- barbar.nvim
-map('n', '<leader>1', ':BufferLineCycleNext<CR>', opts)
-map('n', '<leader>2', ':BufferLineCyclePrev<CR>', opts)
+map("n", "<leader>1", ":BufferLineCycleNext<CR>", opts)
+map("n", "<leader>2", ":BufferLineCyclePrev<CR>", opts)
 
 -- Closing buffers
-map('n', 'bd', ':bd<cr>', opts)
+map("n", "bd", ":bd<cr>", opts)
 
 -- dapui
-map('n', '<leader>dpo', '<cmd>lua require("dapui").open()', opts)
-map('n', '<leader>dpc', '<cmd>lua require("dapui").close()', opts)
-map('n', '<leader>dpt', '<cmd>lua require("dapui").toggle()', opts)
+map("n", "<leader>dpo", '<cmd>lua require("dapui").open()', opts)
+map("n", "<leader>dpc", '<cmd>lua require("dapui").close()', opts)
+map("n", "<leader>dpt", '<cmd>lua require("dapui").toggle()', opts)
+
+-- formatter.nvim
+map("n", "<leader>ff", ":Format<CR>", opts)
