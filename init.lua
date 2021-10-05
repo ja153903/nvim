@@ -28,7 +28,6 @@ require("packer").startup(
       requires = {{"nvim-lua/plenary.nvim"}}
     }
     -- git
-    use "airblade/vim-gitgutter"
     use "f-person/git-blame.nvim"
     use "pantharshit00/vim-prisma"
     use "jparise/vim-graphql"
@@ -46,6 +45,13 @@ require("packer").startup(
     use "akinsho/bufferline.nvim"
     -- debugging protocol
     use {"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}}
+    use {
+      "lewis6991/gitsigns.nvim",
+      requires = {
+        "nvim-lua/plenary.nvim"
+      }
+      -- tag = 'release' -- To use the latest release
+    }
   end
 )
 
