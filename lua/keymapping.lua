@@ -20,20 +20,6 @@ map('n', 'tn', ':tabnew<CR>', opts)
 -- Tree Exploration
 map('n', '<leader>e', ':Explore<CR>', opts)
 
--- LspSaga
---map('n', 'gh', "<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>", opts)
---map('n', '<leader>we', "<cmd>lua require('lspsaga.codeaction').code_action()<CR>", opts)
---map('v', '<leader>we', ":<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>", opts)
---map('n', '<silent>K', ":Lspsaga hover_doc<CR>", opts)
---map('n', '<C-f>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", opts)
---map('n', '<C-b>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", opts)
---map('n', '<silent> gs', "<cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>", opts)
---map('n', 'gr', "<cmd>lua require('lspsaga.rename').rename()<CR>", opts)
---map('n', 'gp', "<cmd>lua require'lspsaga.provider'.preview_definition()<CR>", opts)
---map('n', '<leader>sd', "<cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>", opts)
---map('n', '[e', "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>", opts)
---map('n', ']e', "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>", opts)
-
 -- Telescope
 map('n', '<leader>fi', ':lua require("telescope.builtin").find_files({ hidden = true })<cr>', opts)
 map('n', '<leader>rg', '<cmd>Telescope live_grep<cr>', opts)

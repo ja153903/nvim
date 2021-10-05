@@ -1,7 +1,5 @@
 vim.cmd 'autocmd BufEnter * :syntax sync fromstart'
 vim.cmd 'autocmd BufEnter * :syntax sync clear'
---vim.cmd 'autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart'
---vim.cmd 'autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear'
 
 -- Context.vim
 vim.g['context_nvim_no_redraw'] = 1
