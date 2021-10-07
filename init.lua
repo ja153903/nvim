@@ -16,10 +16,10 @@ require("packer").startup(
     use "kyazdani42/nvim-web-devicons"
     use "glepnir/lspsaga.nvim"
     use "mhartington/formatter.nvim"
-		use {
-			"nvim-lua/completion-nvim",
-			requires = {{'SirVer/ultisnips'}, {"honza/vim-snippets"}}
-		}
+    use {
+      "nvim-lua/completion-nvim",
+      requires = {{"SirVer/ultisnips"}, {"honza/vim-snippets"}}
+    }
     -- Formatting
     use "scrooloose/nerdcommenter"
     -- Telescope
