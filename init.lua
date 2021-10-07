@@ -10,9 +10,9 @@ require("packer").startup(
     -- Essential plugins
     use "wbthomason/packer.nvim"
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+    use "romgrk/nvim-treesitter-context"
     use "neovim/nvim-lspconfig"
     use "nvim-lua/completion-nvim"
-    use "wellle/context.vim"
     use "hoob3rt/lualine.nvim"
     use "kyazdani42/nvim-web-devicons"
     use "glepnir/lspsaga.nvim"
