@@ -13,7 +13,6 @@ vim.cmd [[
 ]]
 
 vim.g["completion_enable_snippet"] = "UltiSnips"
-vim.g["UltiSnipsExpandTrigger"] = "<tab>"
+vim.g["UltiSnipsExpandTrigger"] = "<c-x><c-o>"
 vim.g["UltiSnipsJumpForwardTrigger"] = "<c-b>"
 vim.g["UltiSnipsJumpBackwardTrigger"] = "<c-z>"
-vim.g["UltiSnipsEditSplit"] = "vertical"
