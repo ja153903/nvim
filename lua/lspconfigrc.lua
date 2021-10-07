@@ -143,3 +143,6 @@ nvim_lsp.sumneko_lua.setup {
     }
   }
 }
+
+nvim_lsp.ccls.setup{ on_attach = on_attach }
+
