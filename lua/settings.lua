@@ -8,6 +8,7 @@ set.relativenumber = true
 set.rnu = true
 set.mouse = 'a'
 set.swapfile = false
+set.expandtab = true
 
 vim.cmd 'syntax enable'
 vim.cmd 'highlight clear SignColumn'
