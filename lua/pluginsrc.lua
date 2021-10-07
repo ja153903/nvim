@@ -25,14 +25,14 @@ require("formatter").setup(
           }
         end
       },
-			cpp = {
-				function()
-					return {
-						exe = "clang-format",
-						stdin = true
-					}
-				end
-			}
+      cpp = {
+        function()
+          return {
+            exe = "clang-format",
+            stdin = true
+          }
+        end
+      }
     }
   }
 )
