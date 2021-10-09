@@ -51,7 +51,6 @@ require("packer").startup(
       requires = {
         "nvim-lua/plenary.nvim"
       }
-      -- tag = 'release' -- To use the latest release
     }
   end
 )
