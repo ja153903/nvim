@@ -32,6 +32,14 @@ require("formatter").setup(
             stdin = true
           }
         end
+      },
+      c = {
+        function()
+          return {
+            exe = "clang-format",
+            stdin = true
+          }
+        end
       }
     }
   }
@@ -67,7 +75,7 @@ require("dapui").setup()
 
 require("nvim-treesitter.configs").setup(
   {
-    ensure_installed = {"python", "lua", "rust", "javascript", "typescript", "cpp"},
+    ensure_installed = {"python", "lua", "rust", "javascript", "typescript", "cpp", "c"},
     highlight = {
       enable = true
     }

@@ -3,6 +3,7 @@ local filetype_configs = {
   {filename = "python", value = 4},
   {filename = "rust", value = 4},
   {filename = "cpp", value = 2},
+  {filename = "c", value = 2},
   {filename = "html", value = 2},
   {filename = "json", value = 2},
   {filename = "yaml", value = 2},
