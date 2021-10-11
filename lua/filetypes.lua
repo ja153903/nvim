@@ -14,7 +14,7 @@ local filetype_configs = {
   {filename = "typescript", value = 2},
   {filename = "typescriptreact", value = 2}
 }
-local fmt_settings = {"sw", "ts", "sts"}
+local fmt_settings = {"shiftwidth", "tabstop", "softtabstop"}
 
 for _, config in ipairs(filetype_configs) do
   for _, setting in ipairs(fmt_settings) do

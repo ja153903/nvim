@@ -9,6 +9,7 @@ set.rnu = true
 set.mouse = 'a'
 set.swapfile = false
 set.expandtab = true
+set.autoindent = true
 
 vim.cmd 'syntax enable'
 vim.cmd 'highlight clear SignColumn'
