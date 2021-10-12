@@ -67,6 +67,12 @@ nvim_lsp.gopls.setup {
   on_attach = on_attach
 }
 
+-- these paths are machine-dependent
+local pyright_extra_paths = {
+  "/Users/jaimeabbariao/Documents/bentobox/repos/bentobox/bentobox",
+  "/Users/jaimeabbariao/Documents/bentobox/repos/bentobox/bentobox/apps"
+}
+
 nvim_lsp.pyright.setup {
   on_attach = on_attach,
   before_init = function(_, config)
@@ -80,10 +86,7 @@ nvim_lsp.pyright.setup {
   settings = {
     python = {
       analysis = {
-        extraPaths = {
-          "/Users/jaimeabbariao/Documents/bentobox/repos/bentobox/bentobox",
-          "/Users/jaimeabbariao/Documents/bentobox/repos/bentobox/bentobox/apps"
-        },
+        extraPaths = pyright_extra_paths,
         typeCheckingMode = "off"
       }
     }
