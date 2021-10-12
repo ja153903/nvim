@@ -33,12 +33,11 @@ local on_attach = function(client, bufnr)
   buf_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
   buf_set_keymap("n", "<leader>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
   --buf_set_keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-
-  require "completion".on_attach(client)
 end
 
 nvim_lsp.tsserver.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
 
 local util = require("lspconfig/util")
@@ -64,7 +63,8 @@ local function get_python_path(workspace)
 end
 
 nvim_lsp.gopls.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
 
 -- these paths are machine-dependent
@@ -75,6 +75,7 @@ local pyright_extra_paths = {
 
 nvim_lsp.pyright.setup {
   on_attach = on_attach,
+  capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
   before_init = function(_, config)
     config.settings.python.pythonPath = get_python_path(config.root_dir)
   end,
@@ -93,10 +94,9 @@ nvim_lsp.pyright.setup {
   }
 }
 
-nvim_lsp.elmls.setup {on_attach = on_attach}
-
 nvim_lsp.rust_analyzer.setup {
   on_attach = on_attach,
+  capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
   settings = {
     ["rust-analyzer"] = {
       assist = {
@@ -122,6 +122,7 @@ table.insert(runtime_path, "lua/?/init.lua")
 
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
+  capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
   cmd = {sumneko_binary_path, "-E", sumneko_root_path .. "/main.lua"},
   settings = {
     Lua = {
@@ -147,6 +148,12 @@ nvim_lsp.sumneko_lua.setup {
   }
 }
 
-nvim_lsp.ccls.setup {on_attach = on_attach}
+nvim_lsp.ccls.setup {
+  on_attach = on_attach,
+  capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
 
-nvim_lsp.solang.setup {on_attach = on_attach}
+nvim_lsp.solang.setup {
+  on_attach = on_attach,
+  capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}

@@ -1,18 +1,27 @@
-vim.cmd [[
-	inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-	inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+vim.cmd "set completeopt=menu,menuone,noselect"
 
-	set completeopt=menuone,noinsert,noselect
+local cmp = require "cmp"
 
-	set shortmess+=c
-
-	imap <silent> <c-p> <Plug>(completion_trigger)
-
-	imap <tab> <Plug>(completion_smart_tab)
-	imap <s-tab> <Plug>(completion_smart_s_tab)
-]]
-
-vim.g["completion_enable_snippet"] = "UltiSnips"
-vim.g["UltiSnipsExpandTrigger"] = "<c-x><c-o>"
-vim.g["UltiSnipsJumpForwardTrigger"] = "<c-b>"
-vim.g["UltiSnipsJumpBackwardTrigger"] = "<c-z>"
+cmp.setup(
+  {
+    snippet = {
+      expand = function(args)
+        -- For `ultisnips` user.
+        vim.fn["UltiSnips#Anon"](args.body)
+      end
+    },
+    mapping = {
+      ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+      ["<C-f>"] = cmp.mapping.scroll_docs(4),
+      ["<C-Space>"] = cmp.mapping.complete(),
+      ["<C-e>"] = cmp.mapping.close(),
+      ["<CR>"] = cmp.mapping.confirm({select = true})
+    },
+    sources = {
+      {name = "nvim_lsp"},
+      -- For ultisnips user.
+      {name = "ultisnips"},
+      {name = "buffer"}
+    }
+  }
+)
