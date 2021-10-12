@@ -57,7 +57,12 @@ require("transparent").setup {
 }
 
 vim.opt.termguicolors = true
-require("bufferline").setup {}
+require("bufferline").setup {
+  options = {
+    numbers = "both",
+    diagnostics = "nvim_lsp",
+  }
+}
 
 local nightfox = require("nightfox")
 nightfox.setup {

@@ -39,8 +39,8 @@ map("t", "<leader>tk", "<C-\\><C-n>:FloatermKill<CR>", opts)
 map("t", "<leader>tn", "<C-\\><C-n>:FloatermNext<CR>", opts)
 map("t", "<leader>tp", "<C-\\><C-n>:FloatermPrev<CR>", opts)
 
--- barbar.nvim
-map("n", "<leader>1", ":BufferLineCycleNext<CR>", opts)
+-- bufferline.nvim
+map("n", "<leader>1", ":BufferLinePick<CR>", opts)
 map("n", "<leader>2", ":BufferLineCyclePrev<CR>", opts)
 
 -- Closing buffers
