@@ -56,7 +56,6 @@ require("transparent").setup {
   enable = false
 }
 
-vim.opt.termguicolors = true
 require("bufferline").setup {
   options = {
     numbers = "both",
