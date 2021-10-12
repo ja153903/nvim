@@ -9,6 +9,9 @@ vim.cmd "map <leader>cp :%y+<CR>"
 vim.cmd "map <leader>h :sp<cr>"
 vim.cmd "map <leader>v :vsp<CR>"
 
+-- reload nvim
+map("n", "<leader>gg", ":luafile %<cr>", opts)
+
 -- Tab Management
 map("n", "tl", ":tabprev<CR>", opts)
 map("n", "tt", ":tabedit<Space>", opts)
