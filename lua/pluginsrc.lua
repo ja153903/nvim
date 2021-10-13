@@ -66,7 +66,7 @@ require("bufferline").setup {
 
 local nightfox = require("nightfox")
 nightfox.setup {
-  fox = "nordfox", -- change the colorscheme to use nordfox
+  fox = "palefox", -- change the colorscheme to use nordfox
   styles = {
     comments = "italic", -- change style of comments to be italic
     keywords = "bold", -- change style of keywords to be bold
