@@ -21,7 +21,8 @@ cmp.setup(
       {name = "nvim_lsp"},
       -- For ultisnips user.
       {name = "ultisnips"},
-      {name = "buffer"}
+      {name = "buffer"},
+      {name = "orgmode"}
     }
   }
 )

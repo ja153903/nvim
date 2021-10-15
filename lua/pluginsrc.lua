@@ -60,7 +60,7 @@ require("bufferline").setup {
   options = {
     numbers = "both",
     diagnostics = "nvim_lsp",
-    separator_style = "thick",
+    separator_style = "thick"
   }
 }
 
@@ -175,5 +175,52 @@ require "treesitter-context".setup {
     --   rust = {
     --       'impl_item',
     --   },
+  }
+}
+
+-- orgmode.nvim
+require("orgmode").setup(
+  {
+    org_agenda_files = {"~/Documents/personal_projects/org/*"},
+    org_default_notes_file = "~/Documents/personal_projects/org/refile.org"
+  }
+)
+
+require("headlines").setup {
+  markdown = {
+    source_pattern_start = "^```",
+    source_pattern_end = "^```$",
+    dash_pattern = "^---+$",
+    headline_pattern = "^#+",
+    headline_signs = {"Headline"},
+    codeblock_sign = "CodeBlock",
+    dash_highlight = "Dash"
+  },
+  rmd = {
+    source_pattern_start = "^```",
+    source_pattern_end = "^```$",
+    dash_pattern = "^---+$",
+    headline_pattern = "^#+",
+    headline_signs = {"Headline"},
+    codeblock_sign = "CodeBlock",
+    dash_highlight = "Dash"
+  },
+  vimwiki = {
+    source_pattern_start = "^{{{%a+",
+    source_pattern_end = "^}}}$",
+    dash_pattern = "^---+$",
+    headline_pattern = "^=+",
+    headline_signs = {"Headline"},
+    codeblock_sign = "CodeBlock",
+    dash_highlight = "Dash"
+  },
+  org = {
+    source_pattern_start = "#%+[bB][eE][gG][iI][nN]_[sS][rR][cC]",
+    source_pattern_end = "#%+[eE][nN][dD]_[sS][rR][cC]",
+    dash_pattern = "^-----+$",
+    headline_pattern = "^%*+",
+    headline_signs = {"Headline"},
+    codeblock_sign = "CodeBlock",
+    dash_highlight = "Dash"
   }
 }

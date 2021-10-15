@@ -63,6 +63,9 @@ require("packer").startup(
         "nvim-lua/plenary.nvim"
       }
     }
+    -- presentation related tools
+    use "kristijanhusak/orgmode.nvim"
+    use "lukas-reineke/headlines.nvim"
   end
 )
 
