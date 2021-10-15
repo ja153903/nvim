@@ -66,6 +66,7 @@ require("packer").startup(
     -- presentation related tools
     use "kristijanhusak/orgmode.nvim"
     use "lukas-reineke/headlines.nvim"
+    use "sotte/presenting.vim"
   end
 )
 
