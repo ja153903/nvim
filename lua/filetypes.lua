@@ -6,6 +6,7 @@ local filetype_configs = {
   {filename = "solidity", value = 2},
   {filename = "c", value = 2},
   {filename = "html", value = 2},
+  {filename = "htmldjango", value = 2},
   {filename = "json", value = 2},
   {filename = "yaml", value = 2},
   {filename = "vim", value = 2},
