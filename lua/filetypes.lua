@@ -2,6 +2,7 @@ local fmt = string.format
 local filetype_configs = {
   {filename = "python", value = 4},
   {filename = "rust", value = 4},
+  {filename = "toml", value = 4},
   {filename = "cpp", value = 2},
   {filename = "solidity", value = 2},
   {filename = "c", value = 2},
