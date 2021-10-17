@@ -47,7 +47,8 @@ require("formatter").setup(
 
 -- LuaLine
 require("lualine").setup {
-  options = {theme = "nightfox"},
+  --options = {theme = "nightfox"},
+  options = { theme = "gruvbox"},
   sections = {lualine_c = {{"filename", path = 2}}}
 }
 
@@ -64,17 +65,17 @@ require("bufferline").setup {
   }
 }
 
-local nightfox = require("nightfox")
-nightfox.setup {
-  fox = "palefox", -- change the colorscheme to use nordfox
-  styles = {
-    comments = "italic", -- change style of comments to be italic
-    keywords = "bold", -- change style of keywords to be bold
-    functions = "italic,bold" -- styles can be a comma separated list
-  },
-  transparent = true
-}
-nightfox.load()
+--local nightfox = require("nightfox")
+--nightfox.setup {
+  --fox = "palefox", -- change the colorscheme to use nordfox
+  --styles = {
+    --comments = "italic", -- change style of comments to be italic
+    --keywords = "bold", -- change style of keywords to be bold
+    --functions = "italic,bold" -- styles can be a comma separated list
+  --},
+  --transparent = true
+--}
+--nightfox.load()
 
 require("dapui").setup()
 

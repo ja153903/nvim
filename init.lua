@@ -47,6 +47,7 @@ require("packer").startup(
     -- themes
     use "EdenEast/nightfox.nvim"
     use "folke/tokyonight.nvim"
+    use "savq/melange"
     -- integrated terminal
     use "voldikss/vim-floaterm"
     -- opt
