@@ -68,6 +68,15 @@ require("packer").startup(
     use "kristijanhusak/orgmode.nvim"
     use "lukas-reineke/headlines.nvim"
     use "sotte/presenting.vim"
+    use {
+      "folke/trouble.nvim",
+      requires = "kyazdani42/nvim-web-devicons",
+      config = function()
+        require("trouble").setup {}
+      end
+    }
+    use "williamboman/nvim-lsp-installer"
+    use "brooth/far.vim"
   end
 )
 

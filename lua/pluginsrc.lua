@@ -47,9 +47,12 @@ require("formatter").setup(
 
 -- LuaLine
 require("lualine").setup {
-  --options = {theme = "nightfox"},
-  options = { theme = "gruvbox"},
-  sections = {lualine_c = {{"filename", path = 2}}}
+  options = {theme = "tokyonight"},
+  sections = {
+    lualine_a = {"mode"},
+    lualine_b = {"branch", "diff"},
+    lualine_c = {{"diagnostics", sources = {"nvim_lsp"}}, {"filename", path = 2}}
+  }
 }
 
 -- nvim-transparent
@@ -67,13 +70,13 @@ require("bufferline").setup {
 
 --local nightfox = require("nightfox")
 --nightfox.setup {
-  --fox = "palefox", -- change the colorscheme to use nordfox
-  --styles = {
-    --comments = "italic", -- change style of comments to be italic
-    --keywords = "bold", -- change style of keywords to be bold
-    --functions = "italic,bold" -- styles can be a comma separated list
-  --},
-  --transparent = true
+--fox = "palefox", -- change the colorscheme to use nordfox
+--styles = {
+--comments = "italic", -- change style of comments to be italic
+--keywords = "bold", -- change style of keywords to be bold
+--functions = "italic,bold" -- styles can be a comma separated list
+--},
+--transparent = true
 --}
 --nightfox.load()
 
@@ -225,3 +228,30 @@ require("headlines").setup {
     dash_highlight = "Dash"
   }
 }
+
+local lsp_installer = require("nvim-lsp-installer")
+
+lsp_installer.settings {
+  ui = {
+    icons = {
+      server_installed = "✓",
+      server_pending = "➜",
+      server_uninstalled = "✗"
+    }
+  }
+}
+
+lsp_installer.on_server_ready(
+  function(server)
+    local opts = {}
+
+    -- (optional) Customize the options passed to the server
+    -- if server.name == "tsserver" then
+    --     opts.root_dir = function() ... end
+    -- end
+
+    -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
+    server:setup(opts)
+    vim.cmd [[ do User LspAttachBuffers ]]
+  end
+)
