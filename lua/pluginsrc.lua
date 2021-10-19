@@ -57,7 +57,7 @@ require("lualine").setup {
 
 -- nvim-transparent
 require("transparent").setup {
-  enable = true
+  enable = false
 }
 
 require("bufferline").setup {
