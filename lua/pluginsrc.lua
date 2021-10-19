@@ -182,14 +182,6 @@ require "treesitter-context".setup {
   }
 }
 
--- orgmode.nvim
-require("orgmode").setup(
-  {
-    org_agenda_files = {"~/Documents/personal_projects/org/*"},
-    org_default_notes_file = "~/Documents/personal_projects/org/refile.org"
-  }
-)
-
 require("headlines").setup {
   markdown = {
     source_pattern_start = "^```",
@@ -255,3 +247,6 @@ lsp_installer.on_server_ready(
     vim.cmd [[ do User LspAttachBuffers ]]
   end
 )
+
+-- glow
+vim.g.glow_binary_path = vim.env.HOME .. "/bin"

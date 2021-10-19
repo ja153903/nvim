@@ -14,7 +14,6 @@ require("packer").startup(
     use "neovim/nvim-lspconfig"
     use "hoob3rt/lualine.nvim"
     use "kyazdani42/nvim-web-devicons"
-    use "glepnir/lspsaga.nvim"
     use "mhartington/formatter.nvim"
     use {
       "hrsh7th/nvim-cmp",
@@ -41,13 +40,10 @@ require("packer").startup(
     }
     -- git
     use "f-person/git-blame.nvim"
-    use "pantharshit00/vim-prisma"
-    use "jparise/vim-graphql"
     use "cespare/vim-toml"
     -- themes
     use "EdenEast/nightfox.nvim"
     use "folke/tokyonight.nvim"
-    use "savq/melange"
     -- integrated terminal
     use "voldikss/vim-floaterm"
     -- opt
@@ -65,7 +61,6 @@ require("packer").startup(
       }
     }
     -- presentation related tools
-    use "kristijanhusak/orgmode.nvim"
     use "lukas-reineke/headlines.nvim"
     use "sotte/presenting.vim"
     use {
@@ -77,6 +72,7 @@ require("packer").startup(
     }
     use "williamboman/nvim-lsp-installer"
     use "brooth/far.vim"
+    use {"ellisonleao/glow.nvim"}
   end
 )
 
