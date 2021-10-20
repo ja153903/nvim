@@ -6,12 +6,6 @@ local on_attach = function(client, bufnr)
   local function buf_set_keymap(...)
     vim.api.nvim_buf_set_keymap(bufnr, ...)
   end
-  local function buf_set_option(...)
-    vim.api.nvim_buf_set_option(bufnr, ...)
-  end
-
-  --Enable completion triggered by <c-x><c-o>
-  buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 
   -- Mappings.
   local opts = {noremap = true, silent = true}
@@ -32,12 +26,17 @@ local on_attach = function(client, bufnr)
   buf_set_keymap("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
   buf_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
   buf_set_keymap("n", "<leader>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
-  --buf_set_keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+local lsp_capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  capabilities = lsp_capabilities,
+  flags = {
+    debounce_text_changes = 150
+  }
 }
 
 local util = require("lspconfig/util")
@@ -64,7 +63,10 @@ end
 
 nvim_lsp.gopls.setup {
   on_attach = on_attach,
-  capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  capabilities = lsp_capabilities,
+  flags = {
+    debounce_text_changes = 150
+  }
 }
 
 -- these paths are machine-dependent
@@ -75,7 +77,10 @@ local pyright_extra_paths = {
 
 nvim_lsp.pyright.setup {
   on_attach = on_attach,
-  capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+  capabilities = lsp_capabilities,
+  flags = {
+    debounce_text_changes = 150
+  },
   before_init = function(_, config)
     config.settings.python.pythonPath = get_python_path(config.root_dir)
   end,
@@ -94,25 +99,53 @@ nvim_lsp.pyright.setup {
   }
 }
 
-nvim_lsp.rust_analyzer.setup {
-  on_attach = on_attach,
-  capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-  root_dir = nvim_lsp.util.root_pattern(".git"),
-  settings = {
-    ["rust-analyzer"] = {
-      assist = {
-        importGranularity = "module",
-        importPrefix = "by_self"
+local rust_tools = require("rust-tools")
+rust_tools.setup(
+  {
+    server = {
+      on_attach = on_attach,
+      capabilities = lsp_capabilities,
+      flags = {
+        debounce_text_changes = 150
       },
-      cargo = {
-        loadOutDirsFromCheck = true
-      },
-      procMacro = {
-        enable = true
+      root_dir = nvim_lsp.util.root_pattern(".git"),
+      settings = {
+        ["rust-analyzer"] = {
+          assist = {
+            importGranularity = "module",
+            importPrefix = "by_self"
+          },
+          cargo = {
+            loadOutDirsFromCheck = true
+          },
+          procMacro = {
+            enable = true
+          }
+        }
       }
     }
   }
-}
+)
+
+--nvim_lsp.rust_analyzer.setup {
+--on_attach = on_attach,
+--capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+--root_dir = nvim_lsp.util.root_pattern(".git"),
+--settings = {
+--["rust-analyzer"] = {
+--assist = {
+--importGranularity = "module",
+--importPrefix = "by_self"
+--},
+--cargo = {
+--loadOutDirsFromCheck = true
+--},
+--procMacro = {
+--enable = true
+--}
+--}
+--}
+--}
 
 local sumneko_binary_path = vim.fn.exepath("lua-language-server")
 local sumneko_root_path = vim.fn.fnamemodify(sumneko_binary_path, ":h:h:h")
@@ -123,7 +156,10 @@ table.insert(runtime_path, "lua/?/init.lua")
 
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
-  capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+  capabilities = lsp_capabilities,
+  flags = {
+    debounce_text_changes = 150
+  },
   cmd = {sumneko_binary_path, "-E", sumneko_root_path .. "/main.lua"},
   settings = {
     Lua = {
@@ -151,10 +187,16 @@ nvim_lsp.sumneko_lua.setup {
 
 nvim_lsp.ccls.setup {
   on_attach = on_attach,
-  capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  capabilities = lsp_capabilities,
+  flags = {
+    debounce_text_changes = 150
+  }
 }
 
 nvim_lsp.solang.setup {
   on_attach = on_attach,
-  capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  capabilities = lsp_capabilities,
+  flags = {
+    debounce_text_changes = 150
+  }
 }

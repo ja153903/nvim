@@ -6,8 +6,7 @@ cmp.setup(
   {
     snippet = {
       expand = function(args)
-        -- For `ultisnips` user.
-        vim.fn["UltiSnips#Anon"](args.body)
+        vim.fn["vsnip#anonymous"](args.body)
       end
     },
     mapping = {
@@ -19,9 +18,8 @@ cmp.setup(
     },
     sources = {
       {name = "nvim_lsp"},
-      -- For ultisnips user.
-      {name = "ultisnips"},
       {name = "buffer"},
+      {name = "vsnip"}
     }
   }
 )

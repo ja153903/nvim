@@ -20,14 +20,14 @@ require("packer").startup(
       requires = {
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-nvim-lsp",
-        "quangnguyen30192/cmp-nvim-ultisnips",
         "hrsh7th/cmp-nvim-lua",
         "octaltree/cmp-look",
         "hrsh7th/cmp-path",
         "hrsh7th/cmp-calc",
         "f3fora/cmp-spell",
         "hrsh7th/cmp-emoji",
-        "SirVer/ultisnips"
+        "hrsh7th/cmp-vsnip",
+        "hrsh7th/vim-vsnip"
       }
     }
     -- Formatting
@@ -72,6 +72,7 @@ require("packer").startup(
     use "brooth/far.vim"
     use {"ellisonleao/glow.nvim"}
     use {"akinsho/toggleterm.nvim"}
+    use "simrat39/rust-tools.nvim"
   end
 )
 
