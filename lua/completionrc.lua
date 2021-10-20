@@ -22,7 +22,6 @@ cmp.setup(
       -- For ultisnips user.
       {name = "ultisnips"},
       {name = "buffer"},
-      {name = "orgmode"}
     }
   }
 )
