@@ -44,8 +44,6 @@ require("packer").startup(
     -- themes
     use "EdenEast/nightfox.nvim"
     use "folke/tokyonight.nvim"
-    -- integrated terminal
-    use "voldikss/vim-floaterm"
     -- opt
     use "lewis6991/impatient.nvim"
     -- transparency
@@ -73,6 +71,7 @@ require("packer").startup(
     use "williamboman/nvim-lsp-installer"
     use "brooth/far.vim"
     use {"ellisonleao/glow.nvim"}
+    use {"akinsho/toggleterm.nvim"}
   end
 )
 
