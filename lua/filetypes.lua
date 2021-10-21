@@ -17,7 +17,8 @@ local filetype_configs = {
   {filename = "javascript", value = 2},
   {filename = "javascriptreact", value = 2},
   {filename = "typescript", value = 2},
-  {filename = "typescriptreact", value = 2}
+  {filename = "typescriptreact", value = 2},
+  {filename = "markdown", value = 4}
 }
 local fmt_settings = {"shiftwidth", "tabstop", "softtabstop"}
 
