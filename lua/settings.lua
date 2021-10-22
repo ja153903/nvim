@@ -10,6 +10,8 @@ set.mouse = 'a'
 set.swapfile = false
 set.expandtab = true
 set.autoindent = true
+set.termguicolors = true
+set.background = "dark"
 
 vim.cmd 'syntax enable'
 vim.cmd 'highlight clear SignColumn'

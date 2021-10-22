@@ -97,7 +97,6 @@ require("packer").startup(
 )
 
 require("impatient")
-require("colors")
 require("settings")
 require("keymapping")
 require("lspconfigrc")

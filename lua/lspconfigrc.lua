@@ -1,5 +1,27 @@
 local nvim_lsp = require("lspconfig")
 
+local util = require("lspconfig/util")
+
+local path = util.path
+
+local function get_python_path(workspace)
+  -- Use activated virtualenv.
+  if vim.env.VIRTUAL_ENV then
+    return path.join(vim.env.VIRTUAL_ENV, "bin", "python")
+  end
+
+  -- Find and use virtualenv in workspace directory.
+  for _, pattern in ipairs({"*", ".*"}) do
+    local match = vim.fn.glob(path.join(workspace, pattern, "pyvenv.cfg"))
+    if match ~= "" then
+      return path.join(path.dirname(match), "bin", "python")
+    end
+  end
+
+  -- Fallback to system Python.
+  return exepath("python3") or exepath("python") or "python"
+end
+
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(_, bufnr)
@@ -31,7 +53,7 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 local lsp_capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
-nvim_lsp.tsserver.setup {
+local default_lsp_config = {
   on_attach = on_attach,
   capabilities = lsp_capabilities,
   flags = {
@@ -39,35 +61,8 @@ nvim_lsp.tsserver.setup {
   }
 }
 
-local util = require("lspconfig/util")
-
-local path = util.path
-
-local function get_python_path(workspace)
-  -- Use activated virtualenv.
-  if vim.env.VIRTUAL_ENV then
-    return path.join(vim.env.VIRTUAL_ENV, "bin", "python")
-  end
-
-  -- Find and use virtualenv in workspace directory.
-  for _, pattern in ipairs({"*", ".*"}) do
-    local match = vim.fn.glob(path.join(workspace, pattern, "pyvenv.cfg"))
-    if match ~= "" then
-      return path.join(path.dirname(match), "bin", "python")
-    end
-  end
-
-  -- Fallback to system Python.
-  return exepath("python3") or exepath("python") or "python"
-end
-
-nvim_lsp.gopls.setup {
-  on_attach = on_attach,
-  capabilities = lsp_capabilities,
-  flags = {
-    debounce_text_changes = 150
-  }
-}
+nvim_lsp.tsserver.setup(default_lsp_config)
+nvim_lsp.gopls.setup(default_lsp_config)
 
 -- these paths are machine-dependent
 local pyright_extra_paths = {
@@ -165,18 +160,5 @@ nvim_lsp.sumneko_lua.setup {
   }
 }
 
-nvim_lsp.ccls.setup {
-  on_attach = on_attach,
-  capabilities = lsp_capabilities,
-  flags = {
-    debounce_text_changes = 150
-  }
-}
-
-nvim_lsp.solang.setup {
-  on_attach = on_attach,
-  capabilities = lsp_capabilities,
-  flags = {
-    debounce_text_changes = 150
-  }
-}
+nvim_lsp.ccls.setup(default_lsp_config)
+nvim_lsp.solang.setup(default_lsp_config)
