@@ -1,6 +1,26 @@
 vim.cmd "autocmd BufEnter * :syntax sync fromstart"
 vim.cmd "autocmd BufEnter * :syntax sync clear"
 
+local ts_and_js_formatter_config = {
+  -- prettier
+  function()
+    return {
+      exe = "prettier",
+      args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), "--single-quote"},
+      stdin = true
+    }
+  end
+}
+
+local c_family_formatter_config = {
+  function()
+    return {
+      exe = "clang-format",
+      stdin = true
+    }
+  end
+}
+
 -- formatter.nvim
 require("formatter").setup(
   {
@@ -25,32 +45,10 @@ require("formatter").setup(
           }
         end
       },
-      cpp = {
-        function()
-          return {
-            exe = "clang-format",
-            stdin = true
-          }
-        end
-      },
-      c = {
-        function()
-          return {
-            exe = "clang-format",
-            stdin = true
-          }
-        end
-      },
-      javascript = {
-        -- prettier
-        function()
-          return {
-            exe = "prettier",
-            args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), "--single-quote"},
-            stdin = true
-          }
-        end
-      }
+      cpp = c_family_formatter_config,
+      c = c_family_formatter_config,
+      javascript = ts_and_js_formatter_config,
+      typescript = ts_and_js_formatter_config
     }
   }
 )
