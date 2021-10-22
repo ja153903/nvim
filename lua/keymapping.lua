@@ -33,15 +33,6 @@ map("n", "<leader>fb", "<cmd>Telescope file_browser<cr>", opts)
 -- Netrw
 map("n", "<silent> gx", ":!open <cWORD><cr>", {})
 
--- Floaterm
---map("n", "<leader>tt", ":FloatermNew<CR>", opts)
---map("t", "<leader>tt", "<C-\\><C-n>:FloatermNew<CR>", opts)
---map("n", "<leader>th", ":FloatermToggle<CR>", opts)
---map("t", "<leader>th", "<C-\\><C-n>:FloatermToggle<CR>", opts)
---map("t", "<leader>tk", "<C-\\><C-n>:FloatermKill<CR>", opts)
---map("t", "<leader>tn", "<C-\\><C-n>:FloatermNext<CR>", opts)
---map("t", "<leader>tp", "<C-\\><C-n>:FloatermPrev<CR>", opts)
-
 -- toggleterm
 map("n", "<leader>tt", ":ToggleTerm<CR>", opts)
 map("t", "<leader>tt", "<C-\\><C-n>:ToggleTerm<CR>", opts)
