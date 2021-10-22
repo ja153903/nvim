@@ -2,7 +2,7 @@ local nvim_lsp = require("lspconfig")
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
   local function buf_set_keymap(...)
     vim.api.nvim_buf_set_keymap(bufnr, ...)
   end
@@ -126,26 +126,6 @@ rust_tools.setup(
     }
   }
 )
-
---nvim_lsp.rust_analyzer.setup {
---on_attach = on_attach,
---capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
---root_dir = nvim_lsp.util.root_pattern(".git"),
---settings = {
---["rust-analyzer"] = {
---assist = {
---importGranularity = "module",
---importPrefix = "by_self"
---},
---cargo = {
---loadOutDirsFromCheck = true
---},
---procMacro = {
---enable = true
---}
---}
---}
---}
 
 local sumneko_binary_path = vim.fn.exepath("lua-language-server")
 local sumneko_root_path = vim.fn.fnamemodify(sumneko_binary_path, ":h:h:h")
