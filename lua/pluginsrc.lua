@@ -2,7 +2,6 @@ vim.cmd "autocmd BufEnter * :syntax sync fromstart"
 vim.cmd "autocmd BufEnter * :syntax sync clear"
 
 local ts_and_js_formatter_config = {
-  -- prettier
   function()
     return {
       exe = "prettier",
@@ -302,4 +301,4 @@ function _lazygit_toggle()
   lazygit:toggle()
 end
 
-vim.api.nvim_set_keymap("n", "<leader>tg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>gl", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
