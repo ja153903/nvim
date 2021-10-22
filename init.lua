@@ -97,10 +97,10 @@ require("packer").startup(
 )
 
 require("impatient")
+require("completionrc")
 require("settings")
 require("keymapping")
 require("lspconfigrc")
 require("filetypes")
 require("telescoperc")
 require("pluginsrc")
-require("completionrc")
