@@ -24,6 +24,14 @@ local c_family_formatter_config = {
 require("formatter").setup(
   {
     filetype = {
+      python = {
+        function()
+          return {
+            exe = "black",
+            stdin = false
+          }
+        end
+      },
       rust = {
         -- Rustfmt
         function()
