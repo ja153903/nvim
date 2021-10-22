@@ -43,7 +43,6 @@ require("packer").startup(
     use "cespare/vim-toml"
     -- themes
     use "EdenEast/nightfox.nvim"
-    use "folke/tokyonight.nvim"
     -- opt
     use "lewis6991/impatient.nvim"
     -- transparency

@@ -10,7 +10,7 @@ vim.cmd "map <leader>h :sp<cr>"
 vim.cmd "map <leader>v :vsp<CR>"
 
 -- reload nvim
-map("n", "<leader>gg", ":luafile %<cr>", opts)
+map("n", "<leader>gg", ":luafile $MYVIMRC<cr>", opts)
 
 -- Tab Management
 map("n", "tl", ":tabprev<CR>", opts)
