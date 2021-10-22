@@ -7,14 +7,29 @@ end
 
 require("packer").startup(
   function(use)
-    -- Essential plugins
+    -- Plugin Manager
     use "wbthomason/packer.nvim"
+
+    -- Syntax Highlighting
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
     use "romgrk/nvim-treesitter-context"
+
+    -- LSP
     use "neovim/nvim-lspconfig"
+    use "williamboman/nvim-lsp-installer"
+    use "simrat39/rust-tools.nvim"
+
+    -- Status Line
     use "hoob3rt/lualine.nvim"
+    use "akinsho/bufferline.nvim"
+
+    -- Devicons
     use "kyazdani42/nvim-web-devicons"
+
+    -- Formatter
     use "mhartington/formatter.nvim"
+
+    -- Completion
     use {
       "hrsh7th/nvim-cmp",
       requires = {
@@ -30,36 +45,37 @@ require("packer").startup(
         "hrsh7th/vim-vsnip"
       }
     }
-    -- Formatting
+
+    -- Commenting
     use "scrooloose/nerdcommenter"
+
     -- Telescope
     use "nvim-lua/popup.nvim"
     use {
       "nvim-telescope/telescope.nvim",
       requires = {{"nvim-lua/plenary.nvim"}}
     }
-    -- git
+
+    -- Git
     use "f-person/git-blame.nvim"
-    use "cespare/vim-toml"
-    -- themes
-    use "EdenEast/nightfox.nvim"
-    -- opt
-    use "lewis6991/impatient.nvim"
-    -- transparency
-    use "xiyaowong/nvim-transparent"
-    -- buffer
-    use "akinsho/bufferline.nvim"
-    -- debugging protocol
-    use {"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}}
     use {
       "lewis6991/gitsigns.nvim",
       requires = {
         "nvim-lua/plenary.nvim"
       }
     }
-    -- presentation related tools
-    use "lukas-reineke/headlines.nvim"
-    use "sotte/presenting.vim"
+
+    -- Misc. Language Plugins
+    use "cespare/vim-toml"
+
+    -- Themes
+    use "EdenEast/nightfox.nvim"
+
+    -- Lua Perf Plugins
+    use "lewis6991/impatient.nvim"
+
+    -- Debugger
+    use {"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}}
     use {
       "folke/trouble.nvim",
       requires = "kyazdani42/nvim-web-devicons",
@@ -67,11 +83,16 @@ require("packer").startup(
         require("trouble").setup {}
       end
     }
-    use "williamboman/nvim-lsp-installer"
-    use "brooth/far.vim"
+
+    -- Presentation
+    use "lukas-reineke/headlines.nvim"
+    use "sotte/presenting.vim"
     use {"ellisonleao/glow.nvim"}
+
+    -- Misc. Plugins
+    use "xiyaowong/nvim-transparent"
+    use "brooth/far.vim"
     use {"akinsho/toggleterm.nvim"}
-    use "simrat39/rust-tools.nvim"
   end
 )
 
