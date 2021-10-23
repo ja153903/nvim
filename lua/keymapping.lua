@@ -34,8 +34,8 @@ map("n", "<leader>fb", "<cmd>Telescope file_browser<cr>", opts)
 map("n", "<silent> gx", ":!open <cWORD><cr>", {})
 
 -- toggleterm
-map("n", "<leader>tt", ":ToggleTerm<CR>", opts)
-map("t", "<leader>tt", "<C-\\><C-n>:ToggleTerm<CR>", opts)
+map("n", "<leader>th", ":ToggleTerm<CR>", opts)
+map("t", "<leader>th", "<C-\\><C-n>:ToggleTerm<CR>", opts)
 
 -- bufferline.nvim
 map("n", "<leader>1", ":BufferLinePick<CR>", opts)
