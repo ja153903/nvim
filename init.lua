@@ -86,7 +86,6 @@ require("packer").startup(
 
     -- Presentation
     use "lukas-reineke/headlines.nvim"
-    use "sotte/presenting.vim"
     use {"ellisonleao/glow.nvim"}
 
     -- Misc. Plugins
