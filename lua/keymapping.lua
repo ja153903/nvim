@@ -51,3 +51,6 @@ map("n", "<leader>dpt", '<cmd>lua require("dapui").toggle()', opts)
 
 -- formatter.nvim
 map("n", "<leader>ff", ":Format<CR>", opts)
+
+-- glow
+map("n", "<leader>vp", ":Glow<CR>", opts)
