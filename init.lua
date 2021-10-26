@@ -41,8 +41,8 @@ require("packer").startup(
         "hrsh7th/cmp-calc",
         "f3fora/cmp-spell",
         "hrsh7th/cmp-emoji",
-        "hrsh7th/cmp-vsnip",
-        "hrsh7th/vim-vsnip"
+        "L3MON4D3/LuaSnip",
+        "saadparwaiz1/cmp_luasnip"
       }
     }
 
