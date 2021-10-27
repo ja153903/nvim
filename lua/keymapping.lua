@@ -12,14 +12,6 @@ vim.cmd "map <leader>v :vsp<CR>"
 -- reload nvim
 map("n", "<leader>gg", ":luafile $MYVIMRC<cr>", opts)
 
--- Tab Management
-map("n", "tl", ":tabprev<CR>", opts)
-map("n", "tt", ":tabedit<Space>", opts)
-map("n", "tm", ":tabm<Space>", opts)
-map("n", "td", ":tabclose<CR>", opts)
-map("n", "th", ":tabnext<CR>", opts)
-map("n", "tn", ":tabnew<CR>", opts)
-
 -- Tree Exploration
 map("n", "<leader>e", ":Explore<CR>", opts)
 
@@ -42,7 +34,7 @@ map("n", "<leader>1", ":BufferLinePick<CR>", opts)
 map("n", "<leader>2", ":BufferLineCyclePrev<CR>", opts)
 
 -- Closing buffers
-map("n", "bd", ":bd<cr>", opts)
+map("n", "<leader>bd", ":bd<cr>", opts)
 
 -- dapui
 map("n", "<leader>dpo", '<cmd>lua require("dapui").open()', opts)
