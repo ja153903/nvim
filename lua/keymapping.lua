@@ -3,7 +3,7 @@ local opts = {noremap = true}
 
 vim.g.mapleader = " "
 
-map("i", "jj", "<Esc>", opts)
+map("i", "jk", "<Esc>", opts)
 
 vim.cmd "map <leader>cp :%y+<CR>"
 vim.cmd "map <leader>h :sp<cr>"
