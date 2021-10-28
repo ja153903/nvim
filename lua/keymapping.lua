@@ -31,7 +31,6 @@ map("t", "<leader>th", "<C-\\><C-n>:ToggleTerm<CR>", opts)
 
 -- bufferline.nvim
 map("n", "<leader>1", ":BufferLinePick<CR>", opts)
-map("n", "<leader>2", ":BufferLineCyclePrev<CR>", opts)
 
 -- Closing buffers
 map("n", "<leader>bd", ":bd<cr>", opts)
