@@ -32,9 +32,6 @@ map("t", "<leader>th", "<C-\\><C-n>:ToggleTerm<CR>", opts)
 -- bufferline.nvim
 map("n", "<leader>1", ":BufferLinePick<CR>", opts)
 
--- Closing buffers
-map("n", "<leader>bd", ":bd<cr>", opts)
-
 -- dapui
 map("n", "<leader>dpo", '<cmd>lua require("dapui").open()', opts)
 map("n", "<leader>dpc", '<cmd>lua require("dapui").close()', opts)
