@@ -95,7 +95,8 @@ require("packer").startup(
   end
 )
 
-require("impatient")
+-- TODO: Temporarily commenting this out until it gets resolved
+-- require("impatient")
 require("lspconfigrc")
 require("completionrc")
 require("settings")
