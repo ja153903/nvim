@@ -62,12 +62,11 @@ require("formatter").setup(
 
 -- LuaLine
 require("lualine").setup {
-  options = {theme = "nightfox"},
   sections = {
     lualine_a = {"mode"},
     lualine_b = {"branch", "diff"},
     lualine_c = {{"diagnostics", sources = {"nvim_lsp"}}, {"filename", path = 1}}
-  }
+  },
 }
 
 -- nvim-transparent
