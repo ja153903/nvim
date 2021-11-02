@@ -63,7 +63,7 @@ require("formatter").setup(
 -- LuaLine
 require("lualine").setup {
   options = {
-    theme = "codedark",
+    theme = "nord",
     section_separators = '',
   },
   sections = {
