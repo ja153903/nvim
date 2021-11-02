@@ -94,7 +94,7 @@ nightfox.setup {
     keywords = "bold", -- change style of keywords to be bold
     functions = "italic,bold" -- styles can be a comma separated list
   },
-  transparent = true
+  transparent = false
 }
 nightfox.load()
 
