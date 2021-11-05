@@ -64,7 +64,6 @@ require("formatter").setup(
 require("lualine").setup {
   options = {
     theme = "nord",
-    section_separators = '',
   },
   sections = {
     lualine_a = {"mode"},
