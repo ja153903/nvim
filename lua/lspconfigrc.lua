@@ -61,7 +61,21 @@ local default_lsp_config = {
   }
 }
 
-nvim_lsp.tsserver.setup(default_lsp_config)
+nvim_lsp.tsserver.setup{
+  on_attach = on_attach,
+  capabilities = lsp_capabilities,
+  root_dir = nvim_lsp.util.root_pattern("package.json")
+}
+
+nvim_lsp.denols.setup {
+  on_attach = on_attach,
+  capabilities = lsp_capabilities,
+  -- custom root dir, if we create denoproject, we know to use this
+  root_dir = nvim_lsp.util.root_pattern("deno.json"),
+  init_options = {
+    lint = true,
+  }
+}
 nvim_lsp.gopls.setup(default_lsp_config)
 
 -- these paths are machine-dependent
@@ -121,17 +135,6 @@ rust_tools.setup(
     }
   }
 )
-
-local system_name
-if vim.fn.has("mac") == 1 then
-  system_name = "macOS"
-elseif vim.fn.has("unix") == 1 then
-  system_name = "Linux"
-elseif vim.fn.has("win32") == 1 then
-  system_name = "Windows"
-else
-  print("Unsupported system for sumneko")
-end
 
 -- set the path to the sumneko installation; if you previously installed via the now deprecated :LspInstall, use
 local sumneko_binary = vim.fn.exepath("lua-language-server")
