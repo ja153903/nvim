@@ -160,5 +160,5 @@ nvim_lsp.sumneko_lua.setup {
   }
 }
 
-nvim_lsp.ccls.setup(default_lsp_config)
-nvim_lsp.solang.setup(default_lsp_config)
+--nvim_lsp.ccls.setup(default_lsp_config)
+--nvim_lsp.solang.setup(default_lsp_config)
