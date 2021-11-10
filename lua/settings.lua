@@ -15,3 +15,5 @@ set.background = "dark"
 
 vim.cmd 'syntax enable'
 vim.cmd 'highlight clear SignColumn'
+
+vim.cmd 'autocmd FileType netrw setl bufhidden=delete'
