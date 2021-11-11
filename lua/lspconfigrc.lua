@@ -76,6 +76,7 @@ nvim_lsp.denols.setup {
     lint = true,
   }
 }
+
 nvim_lsp.gopls.setup(default_lsp_config)
 
 -- these paths are machine-dependent
