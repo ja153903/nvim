@@ -70,7 +70,6 @@ nvim_lsp.tsserver.setup{
 nvim_lsp.denols.setup {
   on_attach = on_attach,
   capabilities = lsp_capabilities,
-  -- custom root dir, if we create denoproject, we know to use this
   root_dir = nvim_lsp.util.root_pattern("deno.json"),
   init_options = {
     lint = true,
