@@ -44,4 +44,4 @@ map("n", "<leader>ff", ":Format<CR>", opts)
 map("n", "<leader>vp", ":Glow<CR>", opts)
 
 -- quitting vim
-map("n", "<leader>qw", ":qa!<CR>", opts)
+map("n", "<leader>qw", ":wq<CR>", opts)
