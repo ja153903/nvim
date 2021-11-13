@@ -55,7 +55,9 @@ require("formatter").setup(
       cpp = c_family_formatter_config,
       c = c_family_formatter_config,
       javascript = ts_and_js_formatter_config,
-      typescript = ts_and_js_formatter_config
+      typescript = ts_and_js_formatter_config,
+      javascriptreact = ts_and_js_formatter_config,
+      typescriptreact = ts_and_js_formatter_config,
     }
   }
 )
