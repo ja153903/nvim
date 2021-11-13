@@ -55,6 +55,7 @@ require("packer").startup(
       "nvim-telescope/telescope.nvim",
       requires = {{"nvim-lua/plenary.nvim"}}
     }
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
     -- Git
     use "f-person/git-blame.nvim"
