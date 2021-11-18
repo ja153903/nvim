@@ -13,7 +13,7 @@ vim.cmd "map <leader>v :vsp<CR>"
 map("n", "<leader>gg", ":luafile $MYVIMRC<cr>", opts)
 
 -- Tree Exploration
-map("n", "<leader>e", ":Explore<CR>", opts)
+map("n", "<leader>e", ":NnnExplore<CR>", opts)
 
 -- Telescope
 map("n", "<leader>fi", ':lua require("telescope.builtin").find_files({ hidden = true })<cr>', opts)
