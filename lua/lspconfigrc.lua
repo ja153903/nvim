@@ -102,7 +102,8 @@ nvim_lsp.pyright.setup {
     python = {
       analysis = {
         extraPaths = pyright_extra_paths,
-        typeCheckingMode = "off"
+        typeCheckingMode = "off",
+        useLibraryCodeForTypes = true,
       }
     }
   }
