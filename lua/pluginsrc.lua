@@ -319,7 +319,7 @@ vim.api.nvim_set_keymap("n", "<leader>lg", "<cmd>lua _lazygit_toggle()<CR>", {no
 local cfg = {
   explorer = {
     cmd = "nnn", -- command overrride (-F1 flag is implied, -a flag is invalid!)
-    width = 24, -- width of the vertical split
+    width = 50, -- width of the vertical split
     side = "topleft", -- or "botright", location of the explorer window
     session = "", -- or "global" / "local" / "shared"
     tabs = true -- seperate nnn instance per tab
