@@ -325,17 +325,12 @@ local cfg = {
     tabs = true -- seperate nnn instance per tab
   },
   picker = {
-    cmd = "nnn", -- command override (-p flag is implied)
-    style = {
-      width = 0.9, -- width in percentage of the viewport
-      height = 0.8, -- height in percentage of the viewport
-      xoffset = 0.5, -- xoffset in percentage
-      yoffset = 0.5, -- yoffset in percentage
-      border = "single"
-     -- border decoration for example "rounded"(:h nvim_open_win)
-    },
-    session = "" -- or "global" / "local" / "shared"
+    cmd = "tmux new-session nnn -Pp",
+    style = { border = "rounded" },
+    session = "shared",
   },
+  replace_netrw = "picker",
+  window_nav = "<C-l>",
   auto_open = {
     setup = nil, -- or "explorer" / "picker", auto open on setup function
     tabpage = nil, -- or "explorer" / "picker", auto open when opening new tabpage
@@ -346,13 +341,7 @@ local cfg = {
     }
   },
   auto_close = false, -- close tabpage/nvim when nnn is last window
-  replace_netrw = nil, -- or "explorer" / "picker"
   mappings = {}, -- table containing mappings, see below
-  windownav = {
-    -- window movement mappings to navigate out of nnn
-    left = "<C-w>h",
-    right = "<C-w>l"
-  }
 }
 
 require('nnn').setup(cfg)
