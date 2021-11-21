@@ -27,3 +27,5 @@ for _, config in ipairs(filetype_configs) do
     vim.cmd(fmt("autocmd FileType %s set %s=%d", config.filename, setting, config.value))
   end
 end
+
+vim.cmd 'au BufNewFile,BufRead *.mdx setfiletype markdown'
