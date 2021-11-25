@@ -326,8 +326,8 @@ local cfg = {
   },
   picker = {
     cmd = "tmux new-session nnn -Pp",
-    style = { border = "rounded" },
-    session = "shared",
+    style = {border = "rounded"},
+    session = "shared"
   },
   replace_netrw = "picker",
   window_nav = "<C-l>",
@@ -341,7 +341,7 @@ local cfg = {
     }
   },
   auto_close = false, -- close tabpage/nvim when nnn is last window
-  mappings = {}, -- table containing mappings, see below
+  mappings = {} -- table containing mappings, see below
 }
 
-require('nnn').setup(cfg)
+require("nnn").setup(cfg)
