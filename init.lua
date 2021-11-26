@@ -87,15 +87,13 @@ require("packer").startup(
 
     -- Presentation
     use "lukas-reineke/headlines.nvim"
-    use {"ellisonleao/glow.nvim"}
+    use "ellisonleao/glow.nvim"
 
     -- Misc. Plugins
     use "xiyaowong/nvim-transparent"
     use "brooth/far.vim"
-    use {"akinsho/toggleterm.nvim"}
-    use {
-      "luukvbaal/nnn.nvim"
-    }
+    use "akinsho/toggleterm.nvim"
+    use "luukvbaal/nnn.nvim"
   end
 )
 
