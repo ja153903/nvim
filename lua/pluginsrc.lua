@@ -103,10 +103,26 @@ require("dapui").setup()
 
 require("nvim-treesitter.configs").setup(
   {
-    ensure_installed = {"python", "lua", "rust", "javascript", "typescript", "cpp", "c"},
+    context_commentstring = {enable = true},
+    ensure_installed = {
+      "python",
+      "javascript",
+      "rust",
+      "lua",
+      "html",
+      "css",
+      "typescript",
+      "tsx",
+      "html",
+      "json",
+      "css",
+      "scss"
+    },
     highlight = {
-      enable = true
-    }
+      enable = true,
+      additional_vim_regex_highlighting = false
+    },
+    indent = {enable = false}
   }
 )
 
