@@ -61,7 +61,7 @@ local default_lsp_config = {
   }
 }
 
-nvim_lsp.tsserver.setup{
+nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   capabilities = lsp_capabilities,
   root_dir = nvim_lsp.util.root_pattern("package.json")
@@ -72,7 +72,7 @@ nvim_lsp.denols.setup {
   capabilities = lsp_capabilities,
   root_dir = nvim_lsp.util.root_pattern("deno.json"),
   init_options = {
-    lint = true,
+    lint = true
   }
 }
 
@@ -103,7 +103,7 @@ nvim_lsp.pyright.setup {
       analysis = {
         extraPaths = pyright_extra_paths,
         typeCheckingMode = "off",
-        useLibraryCodeForTypes = true,
+        useLibraryCodeForTypes = true
       }
     }
   }
@@ -171,8 +171,7 @@ require "lspconfig".sumneko_lua.setup {
   }
 }
 
---nvim_lsp.ccls.setup(default_lsp_config)
---nvim_lsp.solang.setup(default_lsp_config)
-
-nvim_lsp.graphql.setup{}
-nvim_lsp.prismals.setup{}
+nvim_lsp.graphql.setup(default_lsp_config)
+nvim_lsp.prismals.setup(default_lsp_config)
+nvim_lsp.html.setup(default_lsp_config)
+nvim_lsp.cssls.setup(default_lsp_config)
