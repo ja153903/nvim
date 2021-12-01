@@ -93,7 +93,6 @@ require("packer").startup(
     use "xiyaowong/nvim-transparent"
     use "brooth/far.vim"
     use "akinsho/toggleterm.nvim"
-    use "luukvbaal/nnn.nvim"
   end
 )
 
