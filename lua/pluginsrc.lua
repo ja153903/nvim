@@ -332,32 +332,32 @@ end
 vim.api.nvim_set_keymap("n", "<leader>lg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
 
 -- nnn
-local cfg = {
-  explorer = {
-    cmd = "nnn", -- command overrride (-F1 flag is implied, -a flag is invalid!)
-    width = 50, -- width of the vertical split
-    side = "topleft", -- or "botright", location of the explorer window
-    session = "", -- or "global" / "local" / "shared"
-    tabs = true -- seperate nnn instance per tab
-  },
-  picker = {
-    cmd = "tmux new-session nnn -Pp",
-    style = {border = "rounded"},
-    session = "shared"
-  },
-  replace_netrw = "picker",
-  window_nav = "<C-l>",
-  auto_open = {
-    setup = nil, -- or "explorer" / "picker", auto open on setup function
-    tabpage = nil, -- or "explorer" / "picker", auto open when opening new tabpage
-    empty = false, -- only auto open on empty buffer
-    ft_ignore = {
-      -- dont auto open for these filetypes
-      "gitcommit"
-    }
-  },
-  auto_close = false, -- close tabpage/nvim when nnn is last window
-  mappings = {} -- table containing mappings, see below
-}
+--local cfg = {
+  --explorer = {
+    --cmd = "nnn", -- command overrride (-F1 flag is implied, -a flag is invalid!)
+    --width = 50, -- width of the vertical split
+    --side = "topleft", -- or "botright", location of the explorer window
+    --session = "", -- or "global" / "local" / "shared"
+    --tabs = true -- seperate nnn instance per tab
+  --},
+  --picker = {
+    --cmd = "tmux new-session nnn -Pp",
+    --style = {border = "rounded"},
+    --session = "shared"
+  --},
+  --replace_netrw = "picker",
+  --window_nav = "<C-l>",
+  --auto_open = {
+    --setup = nil, -- or "explorer" / "picker", auto open on setup function
+    --tabpage = nil, -- or "explorer" / "picker", auto open when opening new tabpage
+    --empty = false, -- only auto open on empty buffer
+    --ft_ignore = {
+      ---- dont auto open for these filetypes
+      --"gitcommit"
+    --}
+  --},
+  --auto_close = false, -- close tabpage/nvim when nnn is last window
+  --mappings = {} -- table containing mappings, see below
+--}
 
-require("nnn").setup(cfg)
+--require("nnn").setup(cfg)
