@@ -6,14 +6,17 @@ set.splitbelow = true
 set.laststatus = 2
 set.relativenumber = true
 set.rnu = true
-set.mouse = 'a'
+set.mouse = "a"
 set.swapfile = false
 set.expandtab = true
 set.autoindent = true
 set.termguicolors = true
 set.background = "dark"
 
-vim.cmd 'syntax enable'
-vim.cmd 'highlight clear SignColumn'
+vim.cmd "syntax enable"
+vim.cmd "highlight clear SignColumn"
 
-vim.cmd 'autocmd FileType netrw setl bufhidden=delete'
+vim.cmd "autocmd FileType netrw setl bufhidden=delete"
+
+vim.cmd "colorscheme tokyonight"
+vim.g.tokyonight_style = "night"

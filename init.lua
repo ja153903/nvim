@@ -71,6 +71,7 @@ require("packer").startup(
 
     -- Themes
     use "EdenEast/nightfox.nvim"
+    use "folke/tokyonight.nvim"
 
     -- Lua Perf Plugins
     use "lewis6991/impatient.nvim"
