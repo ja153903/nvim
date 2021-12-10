@@ -70,7 +70,7 @@ require("lualine").setup {
   sections = {
     lualine_a = {"mode"},
     lualine_b = {"branch", "diff"},
-    lualine_c = {{"diagnostics", sources = {"nvim_lsp"}}, {"filename", path = 1}}
+    lualine_c = {{"diagnostics", sources = {"nvim_diagnostic"}}, {"filename", path = 1}}
   }
 }
 
