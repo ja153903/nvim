@@ -61,20 +61,23 @@ local default_lsp_config = {
   }
 }
 
-nvim_lsp.tsserver.setup {
-  on_attach = on_attach,
-  capabilities = lsp_capabilities,
-  root_dir = nvim_lsp.util.root_pattern("package.json")
-}
 
-nvim_lsp.denols.setup {
-  on_attach = on_attach,
-  capabilities = lsp_capabilities,
-  root_dir = nvim_lsp.util.root_pattern("deno.json"),
-  init_options = {
-    lint = true
+if nvim_lsp.util.root_pattern('deno.json')('.') then
+  nvim_lsp.denols.setup {
+    on_attach = on_attach,
+    capabilities = lsp_capabilities,
+    root_dir = nvim_lsp.util.root_pattern("deno.json"),
+    init_options = {
+      lint = true
+    }
   }
-}
+else
+  nvim_lsp.tsserver.setup {
+    on_attach = on_attach,
+    capabilities = lsp_capabilities,
+    root_dir = nvim_lsp.util.root_pattern("package.json")
+  }
+end
 
 nvim_lsp.gopls.setup(default_lsp_config)
 
