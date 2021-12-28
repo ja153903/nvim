@@ -20,3 +20,4 @@ vim.cmd "autocmd FileType netrw setl bufhidden=delete"
 
 -- vim.g.tokyonight_style = "night"
 -- vim.cmd "colorscheme tokyonight"
+
