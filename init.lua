@@ -94,6 +94,7 @@ require("packer").startup(
     use "xiyaowong/nvim-transparent"
     use "brooth/far.vim"
     use "akinsho/toggleterm.nvim"
+    use "glepnir/dashboard-nvim"
   end
 )
 
