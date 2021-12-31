@@ -1,5 +1,5 @@
 local map = vim.api.nvim_set_keymap
-local opts = { noremap = true }
+local opts = {noremap = true}
 
 vim.g.mapleader = " "
 
@@ -14,14 +14,14 @@ map("n", "<leader>gg", ":luafile $MYVIMRC<cr>", opts)
 
 -- Tree Exploration
 --map("n", "<leader>e", ":NnnExplore %:p:h<CR>", opts)
-map("n", "<leader>e", ":Explore<CR>", opts)
+-- map("n", "<leader>e", ":Explore<CR>", opts)
 
 -- Telescope
 map("n", "<leader>fi", ':lua require("telescope.builtin").find_files({ hidden = true })<cr>', opts)
 map("n", "<leader>rg", "<cmd>Telescope live_grep<cr>", opts)
 map("n", "<leader>br", "<cmd>Telescope buffers<cr>", opts)
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
-map("n", "<leader>fb", "<cmd>Telescope file_browser<cr>", opts)
+map("n", "<leader>e", "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", opts)
 
 -- Netrw
 map("n", "<silent> gx", ":!open <cWORD><cr>", {})
