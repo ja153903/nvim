@@ -12,12 +12,8 @@ vim.cmd "map <leader>v :vsp<CR>"
 -- reload nvim
 map("n", "<leader>gg", ":luafile $MYVIMRC<cr>", opts)
 
--- Tree Exploration
---map("n", "<leader>e", ":NnnExplore %:p:h<CR>", opts)
--- map("n", "<leader>e", ":Explore<CR>", opts)
-
 -- Telescope
-map("n", "<leader>fi", ':lua require("telescope.builtin").find_files({ hidden = true })<cr>', opts)
+map("n", "<leader>fi", '<cmd>lua require("telescope.builtin").find_files({ hidden = true })<cr>', opts)
 map("n", "<leader>rg", "<cmd>Telescope live_grep<cr>", opts)
 map("n", "<leader>br", "<cmd>Telescope buffers<cr>", opts)
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
@@ -43,6 +39,3 @@ map("n", "<leader>ff", ":Format<CR>", opts)
 
 -- glow
 map("n", "<leader>vp", ":Glow<CR>", opts)
-
--- quitting vim
-map("n", "<leader>qw", ":wq<CR>", opts)
