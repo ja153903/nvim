@@ -28,4 +28,4 @@ for _, config in ipairs(filetype_configs) do
   end
 end
 
-vim.cmd("au BufNewFile,BufRead *.mdx setfiletype markdown")
+vim.cmd "au BufNewFile,BufRead *.mdx setfiletype markdown"

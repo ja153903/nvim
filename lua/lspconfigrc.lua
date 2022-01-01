@@ -1,6 +1,6 @@
-local nvim_lsp = require("lspconfig")
+local nvim_lsp = require "lspconfig"
 
-local util = require("lspconfig/util")
+local util = require "lspconfig/util"
 
 local path = util.path
 
@@ -11,7 +11,7 @@ local function get_python_path(workspace)
   end
 
   -- Find and use virtualenv in workspace directory.
-  for _, pattern in ipairs({ "*", ".*" }) do
+  for _, pattern in ipairs { "*", ".*" } do
     local match = vim.fn.glob(path.join(workspace, pattern, "pyvenv.cfg"))
     if match ~= "" then
       return path.join(path.dirname(match), "bin", "python")
@@ -19,7 +19,7 @@ local function get_python_path(workspace)
   end
 
   -- Fallback to system Python.
-  return vim.fn.exepath("python3") or vim.fn.exepath("python") or "python"
+  return vim.fn.exepath "python3" or vim.fn.exepath "python" or "python"
 end
 
 -- Use an on_attach function to only map the following keys
@@ -61,21 +61,21 @@ local default_lsp_config = {
   },
 }
 
-if nvim_lsp.util.root_pattern("deno.json")(".") then
-  nvim_lsp.denols.setup({
+if nvim_lsp.util.root_pattern "deno.json" "." then
+  nvim_lsp.denols.setup {
     on_attach = on_attach,
     capabilities = lsp_capabilities,
-    root_dir = nvim_lsp.util.root_pattern("deno.json"),
+    root_dir = nvim_lsp.util.root_pattern "deno.json",
     init_options = {
       lint = true,
     },
-  })
+  }
 else
-  nvim_lsp.tsserver.setup({
+  nvim_lsp.tsserver.setup {
     on_attach = on_attach,
     capabilities = lsp_capabilities,
-    root_dir = nvim_lsp.util.root_pattern("package.json"),
-  })
+    root_dir = nvim_lsp.util.root_pattern "package.json",
+  }
 end
 
 nvim_lsp.gopls.setup(default_lsp_config)
@@ -86,7 +86,7 @@ local pyright_extra_paths = {
   "/Users/jaimeabbariao/Documents/bentobox/repos/bentobox/bentobox/apps",
 }
 
-nvim_lsp.pyright.setup({
+nvim_lsp.pyright.setup {
   on_attach = on_attach,
   capabilities = lsp_capabilities,
   flags = {
@@ -109,17 +109,17 @@ nvim_lsp.pyright.setup({
       },
     },
   },
-})
+}
 
-local rust_tools = require("rust-tools")
-rust_tools.setup({
+local rust_tools = require "rust-tools"
+rust_tools.setup {
   server = {
     on_attach = on_attach,
     capabilities = lsp_capabilities,
     flags = {
       debounce_text_changes = 150,
     },
-    root_dir = nvim_lsp.util.root_pattern(".git"),
+    root_dir = nvim_lsp.util.root_pattern ".git",
     settings = {
       ["rust-analyzer"] = {
         assist = {
@@ -135,17 +135,17 @@ rust_tools.setup({
       },
     },
   },
-})
+}
 
 -- set the path to the sumneko installation; if you previously installed via the now deprecated :LspInstall, use
-local sumneko_binary = vim.fn.exepath("lua-language-server")
+local sumneko_binary = vim.fn.exepath "lua-language-server"
 local sumneko_root_path = vim.fn.fnamemodify(sumneko_binary, ":h:h:h")
 
 local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
-require("lspconfig").sumneko_lua.setup({
+require("lspconfig").sumneko_lua.setup {
   cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
   settings = {
     Lua = {
@@ -169,9 +169,9 @@ require("lspconfig").sumneko_lua.setup({
       },
     },
   },
-})
+}
 
 nvim_lsp.prismals.setup(default_lsp_config)
 nvim_lsp.html.setup(default_lsp_config)
 nvim_lsp.cssls.setup(default_lsp_config)
-nvim_lsp.svelte.setup({})
+nvim_lsp.svelte.setup {}

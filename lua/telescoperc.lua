@@ -1,6 +1,6 @@
-local telescope = require("telescope")
+local telescope = require "telescope"
 
-telescope.setup({
+telescope.setup {
   disable_devicons = false,
   defaults = {
     file_ignore_patterns = { "node_modules", ".git/", "target/" },
@@ -14,7 +14,7 @@ telescope.setup({
       -- the default case_mode is "smart_case"
     },
   },
-})
+}
 
-telescope.load_extension("fzf")
-telescope.load_extension("file_browser")
+telescope.load_extension "fzf"
+telescope.load_extension "file_browser"

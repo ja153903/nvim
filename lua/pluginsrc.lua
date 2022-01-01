@@ -1,5 +1,5 @@
-vim.cmd("autocmd BufEnter * :syntax sync fromstart")
-vim.cmd("autocmd BufEnter * :syntax sync clear")
+vim.cmd "autocmd BufEnter * :syntax sync fromstart"
+vim.cmd "autocmd BufEnter * :syntax sync clear"
 
 local ts_and_js_formatter_config = {
   function()
@@ -21,7 +21,7 @@ local c_family_formatter_config = {
 }
 
 -- formatter.nvim
-require("formatter").setup({
+require("formatter").setup {
   filetype = {
     python = {
       function()
@@ -58,10 +58,10 @@ require("formatter").setup({
     javascriptreact = ts_and_js_formatter_config,
     typescriptreact = ts_and_js_formatter_config,
   },
-})
+}
 
 -- LuaLine
-require("lualine").setup({
+require("lualine").setup {
   options = {
     theme = "palenight",
   },
@@ -70,23 +70,23 @@ require("lualine").setup({
     lualine_b = { "branch", "diff" },
     lualine_c = { { "diagnostics", sources = { "nvim_diagnostic" } }, { "filename", path = 1 } },
   },
-})
+}
 
 -- nvim-transparent
-require("transparent").setup({
+require("transparent").setup {
   enable = false,
-})
+}
 
-require("bufferline").setup({
+require("bufferline").setup {
   options = {
     numbers = "both",
     diagnostics = "nvim_lsp",
     separator_style = "thick",
   },
-})
+}
 
-local nightfox = require("nightfox")
-nightfox.setup({
+local nightfox = require "nightfox"
+nightfox.setup {
   fox = "nightfox", -- change the colorscheme to use nordfox
   styles = {
     comments = "italic", -- change style of comments to be italic
@@ -94,12 +94,12 @@ nightfox.setup({
     functions = "italic,bold", -- styles can be a comma separated list
   },
   transparent = true,
-})
+}
 nightfox.load()
 
 require("dapui").setup()
 
-require("nvim-treesitter.configs").setup({
+require("nvim-treesitter.configs").setup {
   context_commentstring = { enable = true },
   ensure_installed = {
     "python",
@@ -120,9 +120,9 @@ require("nvim-treesitter.configs").setup({
     additional_vim_regex_highlighting = false,
   },
   indent = { enable = false },
-})
+}
 
-require("gitsigns").setup({
+require("gitsigns").setup {
   signs = {
     add = { hl = "GitSignsAdd", text = "│", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
     change = { hl = "GitSignsChange", text = "│", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
@@ -182,10 +182,10 @@ require("gitsigns").setup({
   yadm = {
     enable = false,
   },
-})
+}
 
 -- nvim-treesitter-context
-require("treesitter-context").setup({
+require("treesitter-context").setup {
   enable = false, -- Enable this plugin (Can be enabled/disabled later via commands)
   throttle = true, -- Throttles plugin updates (may improve performance)
   max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
@@ -211,9 +211,9 @@ require("treesitter-context").setup({
     --       'impl_item',
     --   },
   },
-})
+}
 
-require("headlines").setup({
+require("headlines").setup {
   markdown = {
     source_pattern_start = "^```",
     source_pattern_end = "^```$",
@@ -250,11 +250,11 @@ require("headlines").setup({
     codeblock_sign = "CodeBlock",
     dash_highlight = "Dash",
   },
-})
+}
 
-local lsp_installer = require("nvim-lsp-installer")
+local lsp_installer = require "nvim-lsp-installer"
 
-lsp_installer.settings({
+lsp_installer.settings {
   ui = {
     icons = {
       server_installed = "✓",
@@ -262,7 +262,7 @@ lsp_installer.settings({
       server_uninstalled = "✗",
     },
   },
-})
+}
 
 lsp_installer.on_server_ready(function(server)
   local opts = {}
@@ -274,14 +274,14 @@ lsp_installer.on_server_ready(function(server)
 
   -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
   server:setup(opts)
-  vim.cmd([[ do User LspAttachBuffers ]])
+  vim.cmd [[ do User LspAttachBuffers ]]
 end)
 
 -- glow
 vim.g.glow_binary_path = vim.env.HOME .. "/bin"
 
 -- toggleterm
-require("toggleterm").setup({
+require("toggleterm").setup {
   -- size can be a number or function which is passed the current terminal
   size = function(term)
     if term.direction == "horizontal" then
@@ -314,10 +314,10 @@ require("toggleterm").setup({
       background = "Normal",
     },
   },
-})
+}
 
 local Terminal = require("toggleterm.terminal").Terminal
-local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+local lazygit = Terminal:new { cmd = "lazygit", hidden = true }
 
 function _lazygit_toggle()
   lazygit:toggle()
@@ -327,7 +327,7 @@ vim.api.nvim_set_keymap("n", "<leader>lg", "<cmd>lua _lazygit_toggle()<CR>", { n
 
 -- dashboard-nvim
 vim.g.dashboard_default_executive = "telescope"
-vim.cmd([[
+vim.cmd [[
   let g:dashboard_custom_shortcut = {
   \ "last_session"        : "SPC f s",
   \ "find_history"        : "SPC f h",
@@ -337,8 +337,8 @@ vim.cmd([[
   \ "find_word"           : "SPC r g",
   \ "book_marks"          : "SPC b m",
   \ }
-]])
-vim.cmd([[
+]]
+vim.cmd [[
   let g:dashboard_custom_header = [
   \'',
   \'⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⡿⠿⢿⣿⣿⣿⣿⣿⣿',
@@ -356,4 +356,4 @@ vim.cmd([[
   \'⣿⣿⣿⣿⣷⣆⣠⣤⣤⣤⣀⣀⡀⠀⠒⢻⣶⣾⣿⣿⣿⣿⣿⣿⣿⢀⣀⣾⣿⣿',
   \'',
   \]
-]])
+]]

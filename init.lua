@@ -1,35 +1,35 @@
 local fn = vim.fn
-local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
-  vim.cmd("packadd packer.nvim")
+  fn.system { "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path }
+  vim.cmd "packadd packer.nvim"
 end
 
 require("packer").startup(function(use)
   -- Plugin Manager
-  use("wbthomason/packer.nvim")
+  use "wbthomason/packer.nvim"
 
   -- Syntax Highlighting
-  use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-  use("romgrk/nvim-treesitter-context")
+  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+  use "romgrk/nvim-treesitter-context"
 
   -- LSP
-  use("neovim/nvim-lspconfig")
-  use("williamboman/nvim-lsp-installer")
-  use("simrat39/rust-tools.nvim")
+  use "neovim/nvim-lspconfig"
+  use "williamboman/nvim-lsp-installer"
+  use "simrat39/rust-tools.nvim"
 
   -- Status Line
-  use("hoob3rt/lualine.nvim")
-  use("akinsho/bufferline.nvim")
+  use "hoob3rt/lualine.nvim"
+  use "akinsho/bufferline.nvim"
 
   -- Devicons
-  use("kyazdani42/nvim-web-devicons")
+  use "kyazdani42/nvim-web-devicons"
 
   -- Formatter
-  use("mhartington/formatter.nvim")
+  use "mhartington/formatter.nvim"
 
   -- Completion
-  use({
+  use {
     "hrsh7th/nvim-cmp",
     requires = {
       "hrsh7th/cmp-buffer",
@@ -43,65 +43,65 @@ require("packer").startup(function(use)
       "L3MON4D3/LuaSnip",
       "saadparwaiz1/cmp_luasnip",
     },
-  })
+  }
 
   -- Commenting
-  use("scrooloose/nerdcommenter")
+  use "scrooloose/nerdcommenter"
 
   -- Telescope
-  use("nvim-lua/popup.nvim")
-  use({
+  use "nvim-lua/popup.nvim"
+  use {
     "nvim-telescope/telescope.nvim",
     requires = { { "nvim-lua/plenary.nvim" } },
-  })
-  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+  }
+  use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
   use { "nvim-telescope/telescope-file-browser.nvim" }
 
   -- Git
-  use("f-person/git-blame.nvim")
-  use({
+  use "f-person/git-blame.nvim"
+  use {
     "lewis6991/gitsigns.nvim",
     requires = {
       "nvim-lua/plenary.nvim",
     },
-  })
+  }
 
   -- Misc. Language Plugins
-  use("cespare/vim-toml")
+  use "cespare/vim-toml"
 
   -- Themes
-  use("EdenEast/nightfox.nvim")
-  use("folke/tokyonight.nvim")
+  use "EdenEast/nightfox.nvim"
+  use "folke/tokyonight.nvim"
 
   -- Lua Perf Plugins
-  use("lewis6991/impatient.nvim")
+  use "lewis6991/impatient.nvim"
 
   -- Debugger
-  use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
-  use({
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+  use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
     config = function()
-      require("trouble").setup({})
+      require("trouble").setup {}
     end,
-  })
+  }
 
   -- Presentation
-  use("lukas-reineke/headlines.nvim")
-  use("ellisonleao/glow.nvim")
+  use "lukas-reineke/headlines.nvim"
+  use "ellisonleao/glow.nvim"
 
   -- Misc. Plugins
-  use("xiyaowong/nvim-transparent")
-  use("brooth/far.vim")
-  use("akinsho/toggleterm.nvim")
-  use("glepnir/dashboard-nvim")
+  use "xiyaowong/nvim-transparent"
+  use "brooth/far.vim"
+  use "akinsho/toggleterm.nvim"
+  use "glepnir/dashboard-nvim"
 end)
 
-require("impatient")
-require("lspconfigrc")
-require("completionrc")
-require("settings")
-require("keymapping")
-require("filetypes")
-require("telescoperc")
-require("pluginsrc")
+require "impatient"
+require "lspconfigrc"
+require "completionrc"
+require "settings"
+require "keymapping"
+require "filetypes"
+require "telescoperc"
+require "pluginsrc"
