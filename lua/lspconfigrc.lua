@@ -176,7 +176,7 @@ nvim_lsp.cssls.setup(default_lsp_config)
 nvim_lsp.svelte.setup {}
 
 nvim_lsp.elixirls.setup {
-  cmd = {"/Users/jaimeabbariao/elixir-ls/language_server.sh"},
+  cmd = { "/Users/jaimeabbariao/elixir-ls/language_server.sh" },
   on_attach = on_attach,
   capabilities = lsp_capabilities,
   flags = {
