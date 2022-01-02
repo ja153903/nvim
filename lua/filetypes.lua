@@ -19,6 +19,7 @@ local filetype_configs = {
   { filename = "typescript", value = 2 },
   { filename = "typescriptreact", value = 2 },
   { filename = "markdown", value = 4 },
+  { filename = "elixir", value = 2 },
 }
 local fmt_settings = { "shiftwidth", "tabstop", "softtabstop" }
 
