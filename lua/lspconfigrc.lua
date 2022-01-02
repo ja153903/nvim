@@ -78,8 +78,6 @@ else
   }
 end
 
-nvim_lsp.gopls.setup(default_lsp_config)
-
 -- these paths are machine-dependent
 local pyright_extra_paths = {
   "/Users/jaimeabbariao/Documents/bentobox/repos/bentobox/bentobox",
