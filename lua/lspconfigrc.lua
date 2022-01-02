@@ -85,11 +85,11 @@ local pyright_extra_paths = {
 }
 
 nvim_lsp.pyright.setup {
-  on_attach = on_attach,
-  capabilities = lsp_capabilities,
   flags = {
     debounce_text_changes = 150,
   },
+  on_attach = on_attach,
+  capabilities = lsp_capabilities,
   before_init = function(_, config)
     config.settings.python.pythonPath = get_python_path(config.root_dir)
   end,
