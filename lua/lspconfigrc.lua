@@ -184,5 +184,3 @@ nvim_lsp.elixirls.setup {
     debounce_text_changes = 150,
   },
 }
-
-nvim_lsp.ocamllsp.setup(default_lsp_config)
