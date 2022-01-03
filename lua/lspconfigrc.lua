@@ -169,6 +169,7 @@ require("lspconfig").sumneko_lua.setup {
   },
 }
 
+nvim_lsp.ccls.setup(default_lsp_config)
 nvim_lsp.tailwindcss.setup(default_lsp_config)
 nvim_lsp.prismals.setup(default_lsp_config)
 nvim_lsp.html.setup(default_lsp_config)
