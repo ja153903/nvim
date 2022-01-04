@@ -95,6 +95,9 @@ require("packer").startup(function(use)
   use "brooth/far.vim"
   use "akinsho/toggleterm.nvim"
   use "glepnir/dashboard-nvim"
+
+  -- Prisma
+  use "pantharshit00/vim-prisma"
 end)
 
 require "impatient"
