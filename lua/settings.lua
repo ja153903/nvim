@@ -13,6 +13,8 @@ set.autoindent = true
 set.termguicolors = true
 set.background = "dark"
 
+vim.cmd "colorscheme tokyonight"
+
 vim.cmd "syntax enable"
 vim.cmd "highlight clear SignColumn"
 
