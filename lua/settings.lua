@@ -13,6 +13,7 @@ set.autoindent = true
 set.termguicolors = true
 set.background = "dark"
 
+vim.g.tokyonight_italic_keywords = false
 vim.cmd "colorscheme tokyonight"
 
 vim.cmd "syntax enable"
