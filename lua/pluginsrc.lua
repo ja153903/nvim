@@ -63,7 +63,7 @@ require("formatter").setup {
 -- LuaLine
 require("lualine").setup {
   options = {
-    theme = "tokyonight",
+    theme = "ayu_dark",
   },
   sections = {
     lualine_a = { "mode" },
