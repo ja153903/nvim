@@ -85,17 +85,17 @@ require("bufferline").setup {
   },
 }
 
---local nightfox = require "nightfox"
---nightfox.setup {
---fox = "nordfox", -- change the colorscheme to use nordfox
---styles = {
---comments = "italic", -- change style of comments to be italic
---keywords = "bold", -- change style of keywords to be bold
---functions = "bold", -- styles can be a comma separated list
---},
---transparent = false,
---}
---nightfox.load()
+local nightfox = require "nightfox"
+nightfox.setup {
+  fox = "nightfox", -- change the colorscheme to use nordfox
+  styles = {
+    comments = "italic", -- change style of comments to be italic
+    keywords = "bold", -- change style of keywords to be bold
+    functions = "bold", -- styles can be a comma separated list
+  },
+  transparent = true,
+}
+nightfox.load()
 
 require("dapui").setup()
 
