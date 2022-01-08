@@ -39,3 +39,8 @@ map("n", "<leader>ff", ":Format<CR>", opts)
 
 -- glow
 map("n", "<leader>vp", ":Glow<CR>", opts)
+
+-- packer
+map("n", "<leader>pku", ":PackerUpdate<CR>", opts)
+map("n", "<leader>pki", ":PackerInstall<CR>", opts)
+map("n", "<leader>pks", ":PackerSync<CR>", opts)
