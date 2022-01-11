@@ -9,6 +9,8 @@ vim.cmd "map <leader>cp :%y+<CR>"
 vim.cmd "map <leader>h :sp<cr>"
 vim.cmd "map <leader>v :vsp<CR>"
 
+map("n", "<leader>e", ":Explore<CR>", opts)
+
 -- reload nvim
 map("n", "<leader>gg", ":luafile $MYVIMRC<cr>", opts)
 
@@ -17,7 +19,7 @@ map("n", "<leader>fi", '<cmd>lua require("telescope.builtin").find_files({ hidde
 map("n", "<leader>rg", "<cmd>Telescope live_grep<cr>", opts)
 map("n", "<leader>br", "<cmd>Telescope buffers<cr>", opts)
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
-map("n", "<leader>e", "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", opts)
+map("n", "<leader>fb", "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", opts)
 
 -- Netrw
 map("n", "<silent> gx", ":!open <cWORD><cr>", {})
