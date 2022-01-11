@@ -201,7 +201,7 @@ ins_left({ 'progress', color = { fg = colors.fg, gui = 'bold' } })
 ins_left({
   'diagnostics',
   sources = { 'nvim_diagnostic' },
-  symbols = { error = 'E', warn = 'W', info = 'I' },
+  symbols = { error = ' ', warn = ' ', info = ' ' },
   diagnostics_color = {
     color_error = { fg = colors.red },
     color_warn = { fg = colors.yellow },
@@ -261,8 +261,7 @@ ins_right({
 
 ins_right({
   'diff',
-  -- Is it me or the symbol for modified us really weird
-  symbols = { added = '+', modified = '~ ', removed = '-' },
+  symbols = { added = ' ', modified = '柳', removed = ' ' },
   diff_color = {
     added = { fg = colors.green },
     modified = { fg = colors.orange },
