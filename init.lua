@@ -91,7 +91,6 @@ require("packer").startup(function(use)
   use "ellisonleao/glow.nvim"
 
   -- Misc. Plugins
-  use "xiyaowong/nvim-transparent"
   use "brooth/far.vim"
   use "akinsho/toggleterm.nvim"
   use "glepnir/dashboard-nvim"

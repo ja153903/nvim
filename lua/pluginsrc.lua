@@ -281,12 +281,6 @@ ins_right({
 -- Now don't forget to initialize lualine
 lualine.setup(config)
 
-
--- nvim-transparent
-require("transparent").setup {
-  enable = false,
-}
-
 require("bufferline").setup {
   options = {
     numbers = "both",
