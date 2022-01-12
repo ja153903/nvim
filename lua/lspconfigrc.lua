@@ -70,7 +70,9 @@ if nvim_lsp.util.root_pattern "deno.json" "." then
       lint = true,
     },
   }
-else
+end
+
+if nvim_lsp.util.root_pattern "package.json" "." then
   nvim_lsp.tsserver.setup {
     on_attach = on_attach,
     capabilities = lsp_capabilities,
@@ -170,14 +172,18 @@ require("lspconfig").sumneko_lua.setup {
 }
 
 nvim_lsp.ccls.setup(default_lsp_config)
-nvim_lsp.tailwindcss.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  flags = {
-    debounce_text_changes = 150,
-  },
-  root_dir = nvim_lsp.util.root_pattern "tailwind.config.js",
-}
+
+if nvim_lsp.util.root_pattern "tailwind.config.js" "." then
+  nvim_lsp.tailwindcss.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    flags = {
+      debounce_text_changes = 150,
+    },
+    root_dir = nvim_lsp.util.root_pattern "tailwind.config.js",
+  }
+end
+
 nvim_lsp.prismals.setup(default_lsp_config)
 nvim_lsp.html.setup(default_lsp_config)
 nvim_lsp.cssls.setup(default_lsp_config)
