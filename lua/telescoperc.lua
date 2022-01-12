@@ -16,16 +16,7 @@ telescope.setup {
       -- the default case_mode is "smart_case"
     },
     file_browser = {
-      theme = "dropdown",
-      mappings = {
-        ["i"] = {
-          ["<C-u>"] = fb_actions.create,
-          ["<C-r>"] = fb_actions.rename,
-          ["<C-m>"] = fb_actions.move,
-          ["<C-y>"] = fb_actions.copy,
-          ["<C-d>"] = fb_actions.remove
-        },
-      }
+      theme = "dropdown"
     }
   },
   pickers = {
