@@ -19,7 +19,7 @@ map("n", "<leader>fi", '<cmd>lua require("telescope.builtin").find_files({ hidde
 map("n", "<leader>rg", "<cmd>Telescope live_grep<cr>", opts)
 map("n", "<leader>br", "<cmd>Telescope buffers<cr>", opts)
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
-map("n", "<leader>fb", "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", opts)
+map("n", "<leader>fb", "<cmd>Telescope file_browser<cr>", opts)
 
 -- Netrw
 map("n", "<silent> gx", ":!open <cWORD><cr>", {})
