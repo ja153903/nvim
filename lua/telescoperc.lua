@@ -1,20 +1,31 @@
 local telescope = require "telescope"
 
+local fb_actions = require "telescope._extensions.file_browser.actions"
+
 telescope.setup {
   disable_devicons = false,
   defaults = {
-    file_ignore_patterns = { "node_modules", ".git/", "target/" }
+    file_ignore_patterns = {"node_modules", ".git/", "target/"}
   },
   extensions = {
     fzf = {
       fuzzy = true, -- false will only do exact matching
       override_generic_sorter = true, -- override the generic sorter
       override_file_sorter = true, -- override the file sorter
-      case_mode = "ignore_case", -- or "ignore_case" or "respect_case"
+      case_mode = "ignore_case" -- or "ignore_case" or "respect_case"
       -- the default case_mode is "smart_case"
     },
     file_browser = {
-      theme = "dropdown"
+      theme = "dropdown",
+      mappings = {
+        ["i"] = {
+          ["<C-u>"] = fb_actions.create,
+          ["<C-r>"] = fb_actions.rename,
+          ["<C-m>"] = fb_actions.move,
+          ["<C-y>"] = fb_actions.copy,
+          ["<C-d>"] = fb_actions.remove
+        },
+      }
     }
   },
   pickers = {
