@@ -3,6 +3,6 @@ require("bufferline").setup {
     numbers = "both",
     diagnostics = "nvim_lsp",
     separator_style = "thick",
-    show_bufer_icons = false,
+    show_buffer_icons = true,
   },
 }
