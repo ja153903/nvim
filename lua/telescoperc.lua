@@ -3,7 +3,6 @@ local telescope = require "telescope"
 local fb_actions = require "telescope._extensions.file_browser.actions"
 
 telescope.setup {
-  disable_devicons = true,
   defaults = {
     file_ignore_patterns = { "node_modules", ".git/", "target/" },
   },
@@ -17,6 +16,7 @@ telescope.setup {
     },
     file_browser = {
       theme = "dropdown",
+      disable_devicons = true,
       mappings = {
         ["i"] = {
           ["<C-i>"] = fb_actions.create,
@@ -29,18 +29,23 @@ telescope.setup {
   pickers = {
     find_files = {
       theme = "dropdown",
+      disable_devicons = true,
     },
     git_files = {
       theme = "dropdown",
+      disable_devicons = true,
     },
     grep_string = {
       theme = "dropdown",
+      disable_devicons = true,
     },
     live_grep = {
       theme = "dropdown",
+      disable_devicons = true,
     },
     file_browser = {
       theme = "dropdown",
+      disable_devicons = true,
     },
   },
 }
