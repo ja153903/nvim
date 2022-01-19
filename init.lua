@@ -97,6 +97,9 @@ require("packer").startup(function(use)
 
   -- Prisma
   use "pantharshit00/vim-prisma"
+
+  -- nvim-notify
+  use "rcarriga/nvim-notify"
 end)
 
 require "impatient"
