@@ -12,7 +12,7 @@ vim.cmd "map <leader>v :vsp<CR>"
 map("n", "<leader>e", ":Explore<CR>", opts)
 
 -- reload nvim
-map("n", "<leader>gg", ":luafile $MYVIMRC<cr>", opts)
+map("n", "<leader>gg", ":luafile %<cr>", opts)
 
 -- Telescope
 map("n", "<leader>fi", '<cmd>lua require("telescope.builtin").find_files({ hidden = true })<cr>', opts)
@@ -25,8 +25,8 @@ map("n", "<leader>fb", "<cmd>Telescope file_browser<cr>", opts)
 map("n", "<silent> gx", ":!open <cWORD><cr>", {})
 
 -- toggleterm
---map("n", "<leader>th", ":ToggleTerm<CR>", opts)
---map("t", "<leader>th", "<C-\\><C-n>:ToggleTerm<CR>", opts)
+map("n", "<leader>th", ":ToggleTerm<CR>", opts)
+map("t", "<leader>th", "<C-\\><C-n>:ToggleTerm<CR>", opts)
 
 -- bufferline.nvim
 map("n", "<leader>1", ":BufferLinePick<CR>", opts)
