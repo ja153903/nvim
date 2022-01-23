@@ -1,7 +1,5 @@
 local telescope = require "telescope"
 
-local fb_actions = require "telescope._extensions.file_browser.actions"
-
 telescope.setup {
   defaults = {
     file_ignore_patterns = { "node_modules", ".git/", "target/" },
@@ -17,13 +15,6 @@ telescope.setup {
     file_browser = {
       theme = "dropdown",
       disable_devicons = true,
-      mappings = {
-        ["i"] = {
-          ["<C-i>"] = fb_actions.create,
-          ["<C-r>"] = fb_actions.rename,
-          ["<C-d>"] = fb_actions.remove,
-        },
-      },
     },
   },
   pickers = {

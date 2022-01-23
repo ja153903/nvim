@@ -1,7 +1,7 @@
 require("lualine").setup {
   options = {
     icons_enabled = false,
-    theme = "nightfox",
+    theme = "auto",
     disabled_filetypes = {},
     always_divide_middle = true,
     section_separators = "",

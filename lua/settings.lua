@@ -11,9 +11,11 @@ set.swapfile = false
 set.expandtab = true
 set.autoindent = true
 set.termguicolors = true
-set.background = "dark"
+set.background = "light"
 
 vim.cmd "syntax enable"
 vim.cmd "highlight clear SignColumn"
 
 vim.cmd "autocmd FileType netrw setl bufhidden=delete"
+
+--vim.cmd "colorscheme seoul256"
