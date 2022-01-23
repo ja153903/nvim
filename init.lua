@@ -98,13 +98,12 @@ require("packer").startup(function(use)
   -- Prisma
   use "pantharshit00/vim-prisma"
 
-  -- lspsaga.nvim
-  --use 'glepnir/lspsaga.nvim'
+  -- seoul256.vim
+  use "junegunn/seoul256.vim"
 end)
 
 require "impatient"
 require "lspconfigrc"
---require "sagarc"
 require "completionrc"
 require "settings"
 require "keymapping"
