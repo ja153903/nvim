@@ -97,9 +97,6 @@ require("packer").startup(function(use)
 
   -- Prisma
   use "pantharshit00/vim-prisma"
-
-  -- seoul256.vim
-  use "junegunn/seoul256.vim"
 end)
 
 require "impatient"
