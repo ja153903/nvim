@@ -97,6 +97,9 @@ require("packer").startup(function(use)
 
   -- Prisma
   use "pantharshit00/vim-prisma"
+
+  -- Melange
+  use "savq/melange"
 end)
 
 require "impatient"
@@ -109,6 +112,6 @@ require "telescoperc"
 require "formatterrc"
 require "bufferlinerc"
 require "gitsignsrc"
-require "nightfoxrc"
+--require "nightfoxrc"
 require "lualinerc"
 require "pluginsrc"

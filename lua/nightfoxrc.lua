@@ -10,4 +10,4 @@ nightfox.setup {
   transparent = true,
 }
 
-nightfox.load()
+-- nightfox.load()
