@@ -1,11 +1,11 @@
 require("lualine").setup {
   options = {
-    icons_enabled = false,
+    icons_enabled = true,
     theme = "auto",
     disabled_filetypes = {},
     always_divide_middle = true,
-    section_separators = "",
-    component_separators = "",
+    --section_separators = "",
+    --component_separators = "",
   },
   sections = {
     lualine_a = { "mode" },

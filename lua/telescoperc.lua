@@ -14,29 +14,29 @@ telescope.setup {
     },
     file_browser = {
       theme = "dropdown",
-      disable_devicons = true,
+      disable_devicons = false,
     },
   },
   pickers = {
     find_files = {
       theme = "dropdown",
-      disable_devicons = true,
+      disable_devicons = false,
     },
     git_files = {
       theme = "dropdown",
-      disable_devicons = true,
+      disable_devicons = false,
     },
     grep_string = {
       theme = "dropdown",
-      disable_devicons = true,
+      disable_devicons = false,
     },
     live_grep = {
       theme = "dropdown",
-      disable_devicons = true,
+      disable_devicons = false,
     },
     file_browser = {
       theme = "dropdown",
-      disable_devicons = true,
+      disable_devicons = false,
     },
   },
 }
