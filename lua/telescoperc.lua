@@ -1,4 +1,5 @@
 local telescope = require "telescope"
+local fb_actions = require "telescope".extensions.file_browser.actions
 
 telescope.setup {
   defaults = {
@@ -15,6 +16,13 @@ telescope.setup {
     file_browser = {
       theme = "dropdown",
       disable_devicons = false,
+      mappings = {
+        ["i"] = {
+          ["<C-i>"] = fb_actions.create,
+          ["<C-r>"] = fb_actions.rename,
+          ["<C-d>"] = fb_actions.remove,
+        }
+      }
     },
   },
   pickers = {
