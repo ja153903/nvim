@@ -18,4 +18,10 @@ vim.cmd "highlight clear SignColumn"
 
 vim.cmd "autocmd FileType netrw setl bufhidden=delete"
 
+vim.cmd [[
+augroup user_colors
+  autocmd!
+  autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
+augroup END
+]]
 vim.cmd "colorscheme melange"
