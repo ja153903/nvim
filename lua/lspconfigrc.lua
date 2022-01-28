@@ -171,7 +171,9 @@ require("lspconfig").sumneko_lua.setup {
   },
 }
 
-nvim_lsp.ccls.setup(default_lsp_config)
+if nvim_lsp.util.root_pattern ".ccls" then
+  nvim_lsp.ccls.setup(default_lsp_config)
+end
 
 if nvim_lsp.util.root_pattern "tailwind.config.js" "." then
   nvim_lsp.tailwindcss.setup {
@@ -187,13 +189,3 @@ end
 nvim_lsp.prismals.setup(default_lsp_config)
 nvim_lsp.html.setup(default_lsp_config)
 nvim_lsp.cssls.setup(default_lsp_config)
-nvim_lsp.svelte.setup(default_lsp_config)
-
-nvim_lsp.elixirls.setup {
-  cmd = { "/Users/jaimeabbariao/elixir-ls/language_server.sh" },
-  on_attach = on_attach,
-  capabilities = lsp_capabilities,
-  flags = {
-    debounce_text_changes = 150,
-  },
-}
