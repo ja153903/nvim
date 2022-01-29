@@ -31,11 +31,6 @@ map("t", "<leader>th", "<C-\\><C-n>:ToggleTerm<CR>", opts)
 -- bufferline.nvim
 map("n", "<leader>1", ":BufferLinePick<CR>", opts)
 
--- dapui
-map("n", "<leader>dpo", '<cmd>lua require("dapui").open()', opts)
-map("n", "<leader>dpc", '<cmd>lua require("dapui").close()', opts)
-map("n", "<leader>dpt", '<cmd>lua require("dapui").toggle()', opts)
-
 -- formatter.nvim
 map("n", "<leader>ff", ":Format<CR>", opts)
 

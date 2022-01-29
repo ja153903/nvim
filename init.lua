@@ -76,7 +76,7 @@ require("packer").startup(function(use)
   use "lewis6991/impatient.nvim"
 
   -- Debugger
-  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+  use "mfussenegger/nvim-dap"
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
@@ -113,3 +113,4 @@ require "bufferlinerc"
 require "gitsignsrc"
 require "lualinerc"
 require "pluginsrc"
+require "daprc"

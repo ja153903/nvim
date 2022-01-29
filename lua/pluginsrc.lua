@@ -1,8 +1,6 @@
 vim.cmd "autocmd BufEnter * :syntax sync fromstart"
 vim.cmd "autocmd BufEnter * :syntax sync clear"
 
-require("dapui").setup()
-
 require("nvim-treesitter.configs").setup {
   context_commentstring = { enable = true },
   ensure_installed = {
