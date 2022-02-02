@@ -54,5 +54,8 @@ require("formatter").setup {
     typescript = ts_and_js_formatter_config,
     javascriptreact = ts_and_js_formatter_config,
     typescriptreact = ts_and_js_formatter_config,
+    json = ts_and_js_formatter_config,
+    css = ts_and_js_formatter_config,
+    html = ts_and_js_formatter_config
   },
 }
