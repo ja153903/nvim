@@ -27,6 +27,6 @@ local trigger_transparency = function()
   ]]
 end
 
-trigger_transparency()
+ trigger_transparency()
 
-vim.cmd "colorscheme melange"
+ vim.cmd "colorscheme melange"
