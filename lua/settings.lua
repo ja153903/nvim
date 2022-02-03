@@ -18,15 +18,15 @@ vim.cmd "highlight clear SignColumn"
 
 vim.cmd "autocmd FileType netrw setl bufhidden=delete"
 
-local trigger_transparency = function()
-  vim.cmd [[
-    augroup user_colors
-      autocmd!
-      autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
-    augroup END
-  ]]
-end
+--local trigger_transparency = function()
+  --vim.cmd [[
+    --augroup user_colors
+      --autocmd!
+      --autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
+    --augroup END
+  --]]
+--end
 
- trigger_transparency()
+--trigger_transparency()
 
- vim.cmd "colorscheme melange"
+--vim.cmd "colorscheme melange"

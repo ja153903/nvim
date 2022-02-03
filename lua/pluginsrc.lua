@@ -197,3 +197,5 @@ let g:dashboard_custom_header = [
 \'',
 \]
 ]]
+
+require "nvim-autopairs".setup {}

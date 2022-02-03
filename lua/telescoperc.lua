@@ -1,5 +1,5 @@
 local telescope = require "telescope"
-local fb_actions = require "telescope".extensions.file_browser.actions
+local fb_actions = require("telescope").extensions.file_browser.actions
 
 telescope.setup {
   defaults = {
@@ -21,8 +21,8 @@ telescope.setup {
           ["<C-i>"] = fb_actions.create,
           ["<C-r>"] = fb_actions.rename,
           ["<C-d>"] = fb_actions.remove,
-        }
-      }
+        },
+      },
     },
   },
   pickers = {

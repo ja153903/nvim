@@ -99,6 +99,11 @@ require("packer").startup(function(use)
 
   -- Melange
   use "savq/melange"
+
+  -- lush.nvim
+  use "rktjmp/lush.nvim"
+
+  use 'windwp/nvim-autopairs'
 end)
 
 require "impatient"
@@ -114,4 +119,4 @@ require "gitsignsrc"
 require "lualinerc"
 require "pluginsrc"
 require "daprc"
--- require "nightfoxrc"
+require "nightfoxrc"
