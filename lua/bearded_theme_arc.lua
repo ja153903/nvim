@@ -33,12 +33,12 @@
 -- Lets get started, first we have to require lush, and optionally bind
 -- hsl to a more usable name. HSL can also be imported into other modules.
 
-local lush = require('lush')
+local lush = require "lush"
 local hsl = lush.hsl
 
 local editor = {
-  fg = hsl("#c3cfd9"),
-  bg = hsl("#1c2433")
+  fg = hsl "#c3cfd9",
+  bg = hsl "#1c2433",
 }
 
 -- You may also use the HSLuv colorspace, see http://www.hsluv.org/ and h: lush-hsluv-colors.
@@ -58,9 +58,9 @@ local editor = {
 --
 -- Lets define some colors (these should already be highlighted for you):
 
-local sea_foam  = hsl(208, 80, 80)  -- Try presing C-a and C-x
-local sea_crest = hsl(208, 90, 30)  -- to increment or decrement
-local sea_deep  = hsl(208, 90, 10)  -- the integers used here.
+local sea_foam = hsl(208, 80, 80) -- Try presing C-a and C-x
+local sea_crest = hsl(208, 90, 30) -- to increment or decrement
+local sea_deep = hsl(208, 90, 10) -- the integers used here.
 
 -- Note: Some CursorLine highlighting can obscure any other
 --       highlighing on the current line until you move your cursor.
@@ -80,7 +80,7 @@ local sea_deep  = hsl(208, 90, 10)  -- the integers used here.
 -- Many online palette helpers provide hex values by default, so you can
 -- also import those into hsl.
 
-local sea_gull = hsl("#c6c6c6") -- as as string, preceeded with a #
+local sea_gull = hsl "#c6c6c6"
 
 -- Lush.hsl provides a number of convenience functions for:
 --
@@ -180,12 +180,12 @@ local theme = lush(function()
     -- Note: This looks similar to a link, but the defined group will have its
     -- own properties, cloned from the parent.
     -- Lets make Comments look like Whitespace, but with italics
-    Comment { Whitespace, gui="italic" },
+    Comment { Whitespace, gui = "italic" },
 
     -- Here's how we might set our line numbers to be relational to Normal,
     -- note we'er also using some shorter aliases here.
     -- (`setlocal number`)
-    LineNr       { bg = Normal.bg.da(10), fg = Normal.bg.li(5) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    LineNr { bg = Normal.bg.da(10), fg = Normal.bg.li(5) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr { bg = CursorLine.bg, fg = Normal.fg.ro(180) }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
     -- You can also use highlight groups to define "base" colors, if you dont
@@ -256,9 +256,9 @@ local theme = lush(function()
     -- PmenuThumb   { }, -- Popup menu: Thumb of the scrollbar.
     -- Question     { }, -- |hit-enter| prompt and yes/no questions
     -- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    -- SpecialKey   { }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace| 
-    -- SpellBad     { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise. 
-    -- SpellCap     { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise. 
+    -- SpecialKey   { }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
+    -- SpellBad     { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+    -- SpellCap     { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     -- SpellLocal   { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     -- SpellRare    { }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     -- StatusLine   { }, -- status line of current window

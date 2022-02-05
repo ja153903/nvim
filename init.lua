@@ -103,9 +103,9 @@ require("packer").startup(function(use)
   -- lush.nvim
   use "rktjmp/lush.nvim"
 
-  use 'windwp/nvim-autopairs'
+  use "windwp/nvim-autopairs"
 
-  use 'folke/tokyonight.nvim'
+  use "folke/tokyonight.nvim"
 
   use "lukas-reineke/indent-blankline.nvim"
 end)
