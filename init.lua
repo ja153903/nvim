@@ -98,9 +98,6 @@ require("packer").startup(
     -- Prisma
     use "pantharshit00/vim-prisma"
 
-    -- Melange
-    use "savq/melange"
-
     -- lush.nvim
     use "rktjmp/lush.nvim"
 
@@ -131,4 +128,3 @@ require "gitsignsrc"
 require "lualinerc"
 require "pluginsrc"
 require "daprc"
---require "nightfoxrc"
