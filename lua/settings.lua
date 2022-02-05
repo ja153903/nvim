@@ -27,6 +27,12 @@ vim.cmd "autocmd FileType netrw setl bufhidden=delete"
   --]]
 --end
 
---trigger_transparency()
+-- trigger_transparency()
+
+vim.g.tokyonight_transparent = true
+vim.g.tokyonight_dark_float = false
+vim.g.tokyonight_lualine_bold = true
+vim.g.tokyonight_transparent = true
 
 --vim.cmd "colorscheme melange"
+vim.cmd "colorscheme tokyonight"

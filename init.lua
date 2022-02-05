@@ -104,6 +104,10 @@ require("packer").startup(function(use)
   use "rktjmp/lush.nvim"
 
   use 'windwp/nvim-autopairs'
+
+  use 'folke/tokyonight.nvim'
+
+  use "lukas-reineke/indent-blankline.nvim"
 end)
 
 require "impatient"
@@ -119,4 +123,4 @@ require "gitsignsrc"
 require "lualinerc"
 require "pluginsrc"
 require "daprc"
-require "nightfoxrc"
+--require "nightfoxrc"
