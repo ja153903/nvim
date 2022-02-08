@@ -112,6 +112,7 @@ require("packer").startup(
       "folke/todo-comments.nvim",
       requires = "nvim-lua/plenary.nvim"
     }
+    use "sainnhe/everforest"
   end
 )
 
