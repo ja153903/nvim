@@ -21,9 +21,6 @@ map("n", "<leader>br", "<cmd>Telescope buffers<cr>", opts)
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
 map("n", "<leader>fb", "<cmd>Telescope file_browser<cr>", opts)
 
--- Netrw
-map("n", "<silent> gx", ":!open <cWORD><cr>", {})
-
 -- toggleterm
 map("n", "<leader>th", ":ToggleTerm<CR>", opts)
 map("t", "<leader>th", "<C-\\><C-n>:ToggleTerm<CR>", opts)
