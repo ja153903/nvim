@@ -212,3 +212,5 @@ require("indent_blankline").setup {
 }
 
 require("todo-comments").setup {}
+
+require("nvim-tree").setup {}

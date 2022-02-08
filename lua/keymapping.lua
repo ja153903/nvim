@@ -9,7 +9,7 @@ vim.cmd "map <leader>cp :%y+<CR>"
 vim.cmd "map <leader>h :sp<cr>"
 vim.cmd "map <leader>v :vsp<CR>"
 
-map("n", "<leader>e", ":Explore<CR>", opts)
+map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- reload nvim
 map("n", "<leader>gg", ":luafile %<cr>", opts)
