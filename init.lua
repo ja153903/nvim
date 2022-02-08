@@ -71,7 +71,7 @@ require("packer").startup(
     use "cespare/vim-toml"
 
     -- Themes
-    use "EdenEast/nightfox.nvim"
+    --use "EdenEast/nightfox.nvim"
 
     -- Lua Perf Plugins
     use "lewis6991/impatient.nvim"
@@ -99,11 +99,11 @@ require("packer").startup(
     use "pantharshit00/vim-prisma"
 
     -- lush.nvim
-    use "rktjmp/lush.nvim"
+    --use "rktjmp/lush.nvim"
 
     use "windwp/nvim-autopairs"
 
-    use "folke/tokyonight.nvim"
+    --use "folke/tokyonight.nvim"
 
     use "lukas-reineke/indent-blankline.nvim"
 
@@ -112,6 +112,7 @@ require("packer").startup(
       "folke/todo-comments.nvim",
       requires = "nvim-lua/plenary.nvim"
     }
+
     use "sainnhe/everforest"
   end
 )
