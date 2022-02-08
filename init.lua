@@ -102,7 +102,7 @@ require("packer").startup(function(use)
 
   use "windwp/nvim-autopairs"
 
-  --use "folke/tokyonight.nvim"
+  use "folke/tokyonight.nvim"
 
   use "lukas-reineke/indent-blankline.nvim"
 
