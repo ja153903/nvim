@@ -120,6 +120,11 @@ require("packer").startup(function(use)
       "kyazdani42/nvim-web-devicons", -- optional, for file icon
     },
   }
+
+  use {
+    "sindrets/diffview.nvim",
+    requires = "nvim-lua/plenary.nvim",
+  }
 end)
 
 require "impatient"
@@ -135,3 +140,4 @@ require "gitsignsrc"
 require "lualinerc"
 require "pluginsrc"
 require "daprc"
+require "diffviewrc"
