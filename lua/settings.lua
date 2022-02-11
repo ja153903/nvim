@@ -37,6 +37,4 @@ vim.g.tokyonight_colors = {
   comment = "#a3a9c5",
 }
 
---vim.cmd "colorscheme melange"
 vim.cmd "colorscheme tokyonight"
---vim.cmd "colorscheme everforest"
