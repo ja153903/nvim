@@ -15,7 +15,7 @@ telescope.setup {
     },
     file_browser = {
       theme = "ivy",
-      disable_devicons = true,
+      disable_devicons = false,
       mappings = {
         ["i"] = {
           ["<C-i>"] = fb_actions.create,
@@ -28,23 +28,23 @@ telescope.setup {
   pickers = {
     find_files = {
       theme = "ivy",
-      disable_devicons = true,
+      disable_devicons = false,
     },
     git_files = {
       theme = "ivy",
-      disable_devicons = true,
+      disable_devicons = false,
     },
     grep_string = {
       theme = "ivy",
-      disable_devicons = true,
+      disable_devicons = false,
     },
     live_grep = {
       theme = "ivy",
-      disable_devicons = true,
+      disable_devicons = false,
     },
     file_browser = {
       theme = "ivy",
-      disable_devicons = true,
+      disable_devicons = false,
     },
   },
 }
