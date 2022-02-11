@@ -201,8 +201,8 @@ let g:dashboard_custom_header = [
 require("nvim-autopairs").setup {}
 
 vim.opt.list = true
-vim.opt.listchars:append "space:⋅"
-vim.opt.listchars:append "eol:↴"
+--vim.opt.listchars:append "space:⋅"
+--vim.opt.listchars:append "eol:↴"
 
 require("indent_blankline").setup {
   space_char_blankline = " ",
@@ -214,3 +214,12 @@ require("indent_blankline").setup {
 require("todo-comments").setup {}
 
 require("nvim-tree").setup {}
+
+vim.cmd [[
+let g:nvim_tree_show_icons = {
+    \ 'git': 1,
+    \ 'folders': 0,
+    \ 'files': 0,
+    \ 'folder_arrows': 0,
+    \ }
+]]
