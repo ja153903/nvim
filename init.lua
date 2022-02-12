@@ -98,7 +98,7 @@ require("packer").startup(function(use)
   use "pantharshit00/vim-prisma"
 
   -- lush.nvim
-  --use "rktjmp/lush.nvim"
+  use "rktjmp/lush.nvim"
 
   use "windwp/nvim-autopairs"
 
