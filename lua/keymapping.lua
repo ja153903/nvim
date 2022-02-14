@@ -38,3 +38,6 @@ map("n", "<leader>vp", ":Glow<CR>", opts)
 map("n", "<leader>pku", ":PackerUpdate<CR>", opts)
 map("n", "<leader>pki", ":PackerInstall<CR>", opts)
 map("n", "<leader>pks", ":PackerSync<CR>", opts)
+
+-- context
+map("n", "<leader>ts", ":TSContextToggle<CR>", opts)

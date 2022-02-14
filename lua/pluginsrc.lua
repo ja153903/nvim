@@ -1,6 +1,5 @@
 vim.cmd "autocmd BufEnter * :syntax sync fromstart"
 vim.cmd "autocmd BufEnter * :syntax sync clear"
-
 require("nvim-treesitter.configs").setup {
   context_commentstring = { enable = true },
   ensure_installed = {
@@ -202,7 +201,7 @@ require("nvim-autopairs").setup {}
 
 vim.opt.list = true
 vim.opt.listchars:append "space:⋅"
-vim.opt.listchars:append "eol:↴"
+--vim.opt.listchars:append "eol:↴"
 
 require("indent_blankline").setup {
   space_char_blankline = " ",
