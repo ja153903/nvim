@@ -215,7 +215,7 @@ ins_right {
   function()
     return "▊"
   end,
-  color = { fg = colors.blue },
+  color = { fg = "auto" },
   padding = { left = 1 },
 }
 
