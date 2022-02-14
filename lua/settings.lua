@@ -29,12 +29,13 @@ end
 
 --trigger_transparency()
 
-vim.g.tokyonight_transparent = true
-vim.g.tokyonight_dark_float = false
-vim.g.tokyonight_lualine_bold = true
-vim.g.tokyonight_transparent = true
-vim.g.tokyonight_colors = {
-  comment = "#a3a9c5",
-}
+--vim.g.tokyonight_transparent = true
+--vim.g.tokyonight_dark_float = false
+--vim.g.tokyonight_lualine_bold = true
+--vim.g.tokyonight_transparent = true
+--vim.g.tokyonight_colors = {
+  --comment = "#a3a9c5",
+--}
 
-vim.cmd "colorscheme tokyonight"
+--vim.cmd "colorscheme tokyonight"
+vim.cmd "colorscheme spaceduck"

@@ -125,6 +125,8 @@ require("packer").startup(function(use)
     "sindrets/diffview.nvim",
     requires = "nvim-lua/plenary.nvim",
   }
+
+  use "pineapplegiant/spaceduck"
 end)
 
 require "impatient"
