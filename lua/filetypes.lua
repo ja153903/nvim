@@ -1,5 +1,6 @@
 local fmt = string.format
 local filetype_configs = {
+  { filename = "kotlin", value = 4 },
   { filename = "python", value = 4 },
   { filename = "rust", value = 4 },
   { filename = "toml", value = 4 },
