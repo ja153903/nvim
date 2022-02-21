@@ -70,7 +70,7 @@ require("packer").startup(function(use)
   use "cespare/vim-toml"
 
   -- Themes
-  --use "EdenEast/nightfox.nvim"
+  use "EdenEast/nightfox.nvim"
 
   -- Lua Perf Plugins
   use "lewis6991/impatient.nvim"
@@ -143,3 +143,4 @@ require "lualinerc"
 require "pluginsrc"
 require "daprc"
 require "diffviewrc"
+require "nightfoxrc"
