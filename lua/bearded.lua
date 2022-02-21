@@ -3,37 +3,37 @@ local hsl = lush.hsl
 
 -- Colors
 local arc_colors = {
-  blue = hsl("#69C3FF"),
-  green = hsl("#A4EF58"),
-  orange = hsl("#FF955C"),
-  pink = hsl("#F38CEC"),
-  purple = hsl("#B78AFF"),
-  red = hsl("#E35535"),
-  salmon = hsl("#FF738A"),
-  turquoize = hsl("#22ECDB"),
-  yellow = hsl("#EACD61")
+  blue = hsl "#69C3FF",
+  green = hsl "#A4EF58",
+  orange = hsl "#FF955C",
+  pink = hsl "#F38CEC",
+  purple = hsl "#B78AFF",
+  red = hsl "#E35535",
+  salmon = hsl "#FF738A",
+  turquoize = hsl "#22ECDB",
+  yellow = hsl "#EACD61",
 }
 
 local arc_levels = {
   danger = arc_colors.red,
-  success = hsl("#3CEC85"),
-  warning = hsl("#CF9E57"),
-  info = hsl("#69C3FF")
+  success = hsl "#3CEC85",
+  warning = hsl "#CF9E57",
+  info = hsl "#69C3FF",
 }
 
 local arc = {
   ui = {
-    primary = hsl("#8196B5"),
-    primary_alt = hsl("#273145"),
-    ui_border = hsl("#111721"),
-    ui_background = hsl("#1C2433"),
-    ui_background_alt = hsl("#161D29"),
-    default = hsl("#C3CFD9"),
-    default_main = hsl("#C3CFD9"),
-    default_alt = hsl("#576375"),
+    primary = hsl "#8196B5",
+    primary_alt = hsl "#273145",
+    ui_border = hsl "#111721",
+    ui_background = hsl "#1C2433",
+    ui_background_alt = hsl "#161D29",
+    default = hsl "#C3CFD9",
+    default_main = hsl "#C3CFD9",
+    default_alt = hsl "#576375",
   },
   colors = arc_colors,
-  levels = arc_levels
+  levels = arc_levels,
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
@@ -56,7 +56,7 @@ local theme = lush(function()
     -- Comment      { }, -- any comment
     -- ColorColumn  { }, -- used for the columns set with 'colorcolumn'
     -- Conceal      { }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-     --Cursor       { }, -- character under the cursor
+    --Cursor       { }, -- character under the cursor
     -- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     -- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
     -- CursorColumn { }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
@@ -69,24 +69,24 @@ local theme = lush(function()
     -- EndOfBuffer  { }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     -- TermCursor   { }, -- cursor in a focused terminal
     -- TermCursorNC { }, -- cursor in an unfocused terminal
-     ErrorMsg     { fg = arc.colors.red }, -- error messages on the command line
+    ErrorMsg { fg = arc.colors.red }, -- error messages on the command line
     -- VertSplit    { }, -- the column separating vertically split windows
     -- Folded       { }, -- line used for closed folds
     -- FoldColumn   { }, -- 'foldcolumn'
     -- SignColumn   { }, -- column where |signs| are displayed
     -- IncSearch    { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     -- Substitute   { }, -- |:substitute| replacement text highlighting
-     LineNr       { fg = arc.ui.default_alt }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-     CursorLineNr { fg = arc.ui.default }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    LineNr { fg = arc.ui.default_alt }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    CursorLineNr { fg = arc.ui.default }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     -- MatchParen   { }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     -- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
     -- MsgArea      { }, -- Area for messages and cmdline
     -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     -- MoreMsg      { }, -- |more-prompt|
     -- NonText      { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-     Normal       { fg = arc.ui.primary, bg = arc.ui.primary_alt }, -- normal text
-     NormalFloat  { fg = arc.ui.primary, bg = arc.ui.primary_alt }, -- Normal text in floating windows.
-     NormalNC     { fg = arc.ui.primary, bg = arc.ui.primary_alt }, -- normal text in non-current windows
+    Normal { fg = arc.ui.primary, bg = arc.ui.primary_alt }, -- normal text
+    NormalFloat { fg = arc.ui.primary, bg = arc.ui.primary_alt }, -- Normal text in floating windows.
+    NormalNC { fg = arc.ui.primary, bg = arc.ui.primary_alt }, -- normal text in non-current windows
     -- Pmenu        { }, -- Popup menu: normal item.
     -- PmenuSel     { }, -- Popup menu: selected item.
     -- PmenuSbar    { }, -- Popup menu: scrollbar.
@@ -95,7 +95,7 @@ local theme = lush(function()
     -- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     -- Search       { }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     -- SpecialKey   { }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
-    -- SpellBad     { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise. 
+    -- SpellBad     { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     -- SpellCap     { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     -- SpellLocal   { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     -- SpellRare    { }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
