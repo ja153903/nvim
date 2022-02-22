@@ -22,6 +22,7 @@ local filetype_configs = {
   { filename = "markdown", value = 4 },
   { filename = "elixir", value = 2 },
   { filename = "ocaml", value = 2 },
+  { filename = "fish", value = 4 },
 }
 local fmt_settings = { "shiftwidth", "tabstop", "softtabstop" }
 
