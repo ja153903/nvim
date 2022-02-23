@@ -123,6 +123,8 @@ require("packer").startup(function(use)
     "sindrets/diffview.nvim",
     requires = "nvim-lua/plenary.nvim",
   }
+
+  use "savq/melange"
 end)
 
 require "impatient"
@@ -139,4 +141,4 @@ require "lualinerc"
 require "pluginsrc"
 require "daprc"
 require "diffviewrc"
-require "nightfoxrc"
+-- require "nightfoxrc"

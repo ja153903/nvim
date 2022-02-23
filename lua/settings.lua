@@ -26,3 +26,5 @@ local trigger_transparency = function()
     augroup END
   ]]
 end
+
+vim.cmd "colorscheme melange"

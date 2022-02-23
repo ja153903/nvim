@@ -39,14 +39,7 @@ local config = {
     -- Disable sections and component separators
     component_separators = "",
     section_separators = "",
-    theme = {
-    -- We are going to use lualine_c an lualine_x as left and
-    -- right section. Both are highlighted by c theme .  So we
-    -- are just setting default looks o statusline
-    normal = { c = { fg = colors.fg, bg = colors.bg } },
-    inactive = { c = { fg = colors.fg, bg = colors.bg } },
-
-    },
+    theme = "auto"
   },
   sections = {
     -- these are to remove the defaults
@@ -87,37 +80,41 @@ ins_left {
   padding = { left = 0, right = 1 }, -- We don't need space before this
 }
 
+--ins_left {
+  ---- mode component
+  --function()
+    ---- auto change color according to neovims mode
+    --local mode_color = {
+      --n = colors.red,
+      --i = colors.green,
+      --v = colors.blue,
+      --[""] = colors.blue,
+      --V = colors.blue,
+      --c = colors.magenta,
+      --no = colors.red,
+      --s = colors.orange,
+      --S = colors.orange,
+      --[""] = colors.orange,
+      --ic = colors.yellow,
+      --R = colors.violet,
+      --Rv = colors.violet,
+      --cv = colors.red,
+      --ce = colors.red,
+      --r = colors.cyan,
+      --rm = colors.cyan,
+      --["r?"] = colors.cyan,
+      --["!"] = colors.red,
+      --t = colors.red,
+    --}
+    --vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. "auto")
+    --return ""
+  --end,
+  --color = "LualineMode",
+  --padding = { right = 1 },
+--}
+
 ins_left {
-  -- mode component
-  function()
-    -- auto change color according to neovims mode
-    local mode_color = {
-      n = colors.red,
-      i = colors.green,
-      v = colors.blue,
-      [""] = colors.blue,
-      V = colors.blue,
-      c = colors.magenta,
-      no = colors.red,
-      s = colors.orange,
-      S = colors.orange,
-      [""] = colors.orange,
-      ic = colors.yellow,
-      R = colors.violet,
-      Rv = colors.violet,
-      cv = colors.red,
-      ce = colors.red,
-      r = colors.cyan,
-      rm = colors.cyan,
-      ["r?"] = colors.cyan,
-      ["!"] = colors.red,
-      t = colors.red,
-    }
-    vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg)
-    return ""
-  end,
-  color = "LualineMode",
-  padding = { right = 1 },
+  "mode",
 }
 
 ins_left {
