@@ -125,6 +125,7 @@ require("packer").startup(function(use)
   }
 
   use "savq/melange"
+  use "luisiacc/gruvbox-baby"
 end)
 
 require "impatient"

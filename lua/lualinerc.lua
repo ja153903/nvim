@@ -39,7 +39,7 @@ local config = {
     -- Disable sections and component separators
     component_separators = "",
     section_separators = "",
-    theme = "auto"
+    theme = "auto",
   },
   sections = {
     -- these are to remove the defaults
@@ -81,36 +81,36 @@ ins_left {
 }
 
 --ins_left {
-  ---- mode component
-  --function()
-    ---- auto change color according to neovims mode
-    --local mode_color = {
-      --n = colors.red,
-      --i = colors.green,
-      --v = colors.blue,
-      --[""] = colors.blue,
-      --V = colors.blue,
-      --c = colors.magenta,
-      --no = colors.red,
-      --s = colors.orange,
-      --S = colors.orange,
-      --[""] = colors.orange,
-      --ic = colors.yellow,
-      --R = colors.violet,
-      --Rv = colors.violet,
-      --cv = colors.red,
-      --ce = colors.red,
-      --r = colors.cyan,
-      --rm = colors.cyan,
-      --["r?"] = colors.cyan,
-      --["!"] = colors.red,
-      --t = colors.red,
-    --}
-    --vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. "auto")
-    --return ""
-  --end,
-  --color = "LualineMode",
-  --padding = { right = 1 },
+---- mode component
+--function()
+---- auto change color according to neovims mode
+--local mode_color = {
+--n = colors.red,
+--i = colors.green,
+--v = colors.blue,
+--[""] = colors.blue,
+--V = colors.blue,
+--c = colors.magenta,
+--no = colors.red,
+--s = colors.orange,
+--S = colors.orange,
+--[""] = colors.orange,
+--ic = colors.yellow,
+--R = colors.violet,
+--Rv = colors.violet,
+--cv = colors.red,
+--ce = colors.red,
+--r = colors.cyan,
+--rm = colors.cyan,
+--["r?"] = colors.cyan,
+--["!"] = colors.red,
+--t = colors.red,
+--}
+--vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. "auto")
+--return ""
+--end,
+--color = "LualineMode",
+--padding = { right = 1 },
 --}
 
 ins_left {

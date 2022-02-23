@@ -29,4 +29,4 @@ end
 
 trigger_transparency()
 
-vim.cmd "colorscheme melange"
+vim.cmd "colorscheme gruvbox-baby"
