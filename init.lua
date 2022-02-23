@@ -124,7 +124,6 @@ require("packer").startup(function(use)
     requires = "nvim-lua/plenary.nvim",
   }
 
-  use "savq/melange"
   use "luisiacc/gruvbox-baby"
 end)
 
@@ -142,4 +141,3 @@ require "lualinerc"
 require "pluginsrc"
 require "daprc"
 require "diffviewrc"
--- require "nightfoxrc"
