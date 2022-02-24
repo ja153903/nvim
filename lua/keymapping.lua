@@ -20,6 +20,7 @@ map("n", "<leader>rg", "<cmd>Telescope live_grep<cr>", opts)
 map("n", "<leader>br", "<cmd>Telescope buffers<cr>", opts)
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
 map("n", "<leader>fb", "<cmd>Telescope file_browser<cr>", opts)
+map("n", "<leader>sh", "<cmd>Telescope search_history<CR>", opts)
 
 -- toggleterm
 map("n", "<leader>th", ":ToggleTerm<CR>", opts)
