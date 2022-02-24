@@ -26,7 +26,3 @@ local trigger_transparency = function()
     augroup END
   ]]
 end
-
-trigger_transparency()
-
-vim.cmd "colorscheme gruvbox-baby"
