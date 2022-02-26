@@ -27,3 +27,5 @@ dap.configurations.javascript = {
     processId = require("dap.utils").pick_process,
   },
 }
+
+require("dapui").setup()

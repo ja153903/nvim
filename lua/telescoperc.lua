@@ -21,6 +21,7 @@ telescope.setup {
           ["<C-i>"] = fb_actions.create,
           ["<C-r>"] = fb_actions.rename,
           ["<C-d>"] = fb_actions.remove,
+          ["<C-o>"] = fb_actions.move,
         },
       },
     },

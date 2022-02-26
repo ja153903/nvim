@@ -44,3 +44,6 @@ map("n", "<leader>pks", ":PackerSync<CR>", opts)
 
 -- context
 map("n", "<leader>ts", ":TSContextToggle<CR>", opts)
+
+-- dapui
+
