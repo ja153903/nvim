@@ -43,10 +43,6 @@ telescope.setup {
       theme = "ivy",
       disable_devicons = false,
     },
-    file_browser = {
-      theme = "ivy",
-      disable_devicons = false,
-    },
   },
 }
 
