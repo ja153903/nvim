@@ -23,6 +23,9 @@ map("n", "<leader>fb", "<cmd>Telescope file_browser<cr>", opts)
 map("n", "<leader>sh", "<cmd>Telescope search_history<CR>", opts)
 map("n", "<leader>cm", "<cmd>Telescope commands<CR>", opts)
 map("n", "<leader>of", "<cmd>Telescope oldfiles<CR>", opts)
+map("n", "<leader>ca", "<cmd>Telescope lsp_code_actions<CR>", opts)
+map("n", "<leader>sd", "<cmd>Telescope diagnostics<CR>", opts)
+
 
 -- toggleterm
 map("n", "<leader>th", ":ToggleTerm<CR>", opts)
