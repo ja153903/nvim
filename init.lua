@@ -123,6 +123,8 @@ require("packer").startup(function(use)
     "sindrets/diffview.nvim",
     requires = "nvim-lua/plenary.nvim",
   }
+
+  use "projekt0n/github-nvim-theme"
 end)
 
 require "impatient"

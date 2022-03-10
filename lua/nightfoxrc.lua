@@ -1,7 +1,7 @@
 local nightfox = require "nightfox"
 
 nightfox.setup {
-  fox = "nordfox",
+  fox = "duskfox",
   styles = {
     comments = "italic", -- change style of comments to be italic
     keywords = "bold", -- change style of keywords to be bold
