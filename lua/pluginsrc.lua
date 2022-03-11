@@ -213,6 +213,8 @@ require("indent_blankline").setup {
 require("todo-comments").setup {}
 
 require("nvim-tree").setup {}
+vim.cmd "let g:nvim_tree_respect_buf_cwd = 1"
+vim.cmd "au BufEnter * if &ft != 'help' | silent! cd %:p:h | endif"
 
 vim.cmd [[
 let g:nvim_tree_show_icons = {
