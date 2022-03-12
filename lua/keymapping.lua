@@ -26,7 +26,6 @@ map("n", "<leader>of", "<cmd>Telescope oldfiles<CR>", opts)
 map("n", "<leader>ca", "<cmd>Telescope lsp_code_actions<CR>", opts)
 map("n", "<leader>sd", "<cmd>Telescope diagnostics<CR>", opts)
 
-
 -- toggleterm
 map("n", "<leader>th", ":ToggleTerm<CR>", opts)
 map("t", "<leader>th", "<C-\\><C-n>:ToggleTerm<CR>", opts)

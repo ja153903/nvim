@@ -75,8 +75,6 @@ require("packer").startup(function(use)
   -- Lua Perf Plugins
   use "lewis6991/impatient.nvim"
 
-  -- Debugger
-  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
@@ -125,20 +123,28 @@ require("packer").startup(function(use)
   }
 
   use "projekt0n/github-nvim-theme"
+
+  -- for adding mappings
+  use "b0o/mapx.nvim"
+
+  use 'numToStr/Comment.nvim'
 end)
 
-require "impatient"
-require "lspconfigrc"
-require "completionrc"
-require "settings"
-require "daprc"
-require "keymapping"
-require "filetypes"
-require "telescoperc"
-require "formatterrc"
-require "bufferlinerc"
-require "gitsignsrc"
-require "lualinerc"
-require "pluginsrc"
-require "diffviewrc"
-require "nightfoxrc"
+if vim.g.vscode then
+  require "vscode"
+else
+  require "impatient"
+  require "lspconfigrc"
+  require "completionrc"
+  require "settings"
+  require "keymapping"
+  require "filetypes"
+  require "telescoperc"
+  require "formatterrc"
+  require "bufferlinerc"
+  require "gitsignsrc"
+  require "lualinerc"
+  require "pluginsrc"
+  require "diffviewrc"
+  require "nightfoxrc"
+end
