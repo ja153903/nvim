@@ -27,10 +27,6 @@ local trigger_transparency = function()
   ]]
 end
 
---require("github-theme").setup({
-  --dark_float = false,
---})
-
 vim.cmd [[
     " trigger `autoread` when files changes on disk
       set autoread
