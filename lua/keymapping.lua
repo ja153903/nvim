@@ -50,6 +50,6 @@ map("n", "<leader>ts", ":TSContextToggle<CR>", opts)
 -- dapui
 
 vim.cmd [[
-  nnoremap <silent>[b :BufferLineCycleNext<CR>
-  nnoremap <silent>b] :BufferLineCyclePrev<CR>
+  nnoremap <leader>bn :BufferLineCycleNext<CR>
+  nnoremap <leader>bp :BufferLineCyclePrev<CR>
 ]]
