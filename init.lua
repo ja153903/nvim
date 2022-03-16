@@ -134,6 +134,7 @@ if vim.g.vscode then
   require "vscode"
 else
   require "impatient"
+  require "nightfoxrc"
   require "lspconfigrc"
   require "completionrc"
   require "settings"
@@ -146,5 +147,4 @@ else
   require "lualinerc"
   require "pluginsrc"
   require "diffviewrc"
-  require "nightfoxrc"
 end
