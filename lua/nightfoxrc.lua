@@ -1,3 +1,3 @@
 local nightfox = require "nightfox"
 
-vim.cmd "colorscheme nordfox"
+vim.cmd "colorscheme nightfox"
