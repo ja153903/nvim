@@ -100,8 +100,6 @@ require("packer").startup(function(use)
 
   use "windwp/nvim-autopairs"
 
-  use "folke/tokyonight.nvim"
-
   use "lukas-reineke/indent-blankline.nvim"
 
   -- Lua
@@ -122,7 +120,7 @@ require("packer").startup(function(use)
     requires = "nvim-lua/plenary.nvim",
   }
 
-  use "projekt0n/github-nvim-theme"
+  use "rebelot/kanagawa.nvim"
 
   -- for adding mappings
   use "b0o/mapx.nvim"
@@ -134,7 +132,8 @@ if vim.g.vscode then
   require "vscode"
 else
   require "impatient"
-  require "nightfoxrc"
+  --require "nightfoxrc"
+  require "kanagawarc"
   require "lspconfigrc"
   require "completionrc"
   require "settings"
