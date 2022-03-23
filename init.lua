@@ -126,6 +126,8 @@ require("packer").startup(function(use)
   use "b0o/mapx.nvim"
 
   use 'numToStr/Comment.nvim'
+
+  use 'github/copilot.vim'
 end)
 
 if vim.g.vscode then
