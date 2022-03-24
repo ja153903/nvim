@@ -69,9 +69,6 @@ require("packer").startup(function(use)
   -- Misc. Language Plugins
   use "cespare/vim-toml"
 
-  -- Themes
-  use "EdenEast/nightfox.nvim"
-
   -- Lua Perf Plugins
   use "lewis6991/impatient.nvim"
 
