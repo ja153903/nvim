@@ -1,7 +1,7 @@
 require('kanagawa').setup({
     undercurl = true,           -- enable undercurls
     commentStyle = "NONE",
-    functionStyle = "bold",
+    functionStyle = "NONE",
     keywordStyle = "bold",
     statementStyle = "bold",
     typeStyle = "bold",
