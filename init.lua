@@ -131,7 +131,6 @@ if vim.g.vscode then
   require "vscode"
 else
   require "impatient"
-  --require "nightfoxrc"
   require "kanagawarc"
   require "lspconfigrc"
   require "completionrc"
