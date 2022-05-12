@@ -86,7 +86,6 @@ require("packer").startup(function(use)
 
   -- Misc. Plugins
   use "brooth/far.vim"
-  use "akinsho/toggleterm.nvim"
   use "glepnir/dashboard-nvim"
 
   -- Prisma
@@ -118,13 +117,6 @@ require("packer").startup(function(use)
   }
 
   use "rebelot/kanagawa.nvim"
-
-  -- for adding mappings
-  use "b0o/mapx.nvim"
-
-  use 'numToStr/Comment.nvim'
-
-  use 'github/copilot.vim'
 end)
 
 if vim.g.vscode then
