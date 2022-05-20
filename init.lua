@@ -111,11 +111,6 @@ require("packer").startup(function(use)
     },
   }
 
-  use {
-    "sindrets/diffview.nvim",
-    requires = "nvim-lua/plenary.nvim",
-  }
-
   use "rebelot/kanagawa.nvim"
 end)
 
@@ -135,5 +130,4 @@ else
   require "gitsignsrc"
   require "lualinerc"
   require "pluginsrc"
-  require "diffviewrc"
 end
