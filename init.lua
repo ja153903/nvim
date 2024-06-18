@@ -312,8 +312,12 @@ require('lazy').setup({
       require('mason-lspconfig').setup {
         handlers = {
           function(server_name)
+            local navic = require 'nvim-navic'
             local server = servers[server_name] or {}
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+            server.on_attach = function(client, bufnr)
+              navic.attach(client, bufnr)
+            end
             require('lspconfig')[server_name].setup(server)
           end,
         },
