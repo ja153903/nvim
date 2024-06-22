@@ -22,7 +22,7 @@ return {
           bat = {
             cmd = 'bat',
             args = '--color=always --style=numbers,changes',
-            theme = 'gruvbox-light',
+            theme = 'gruvbox-dark',
           },
         },
       }

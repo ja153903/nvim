@@ -1,8 +1,9 @@
 return {
   {
     'miikanissi/modus-themes.nvim',
-    lazy = false,
-    priority = 1000,
+    enabled = false,
+    -- lazy = false,
+    -- priority = 1000,
     init = function()
       -- Default options
       require('modus-themes').setup {
