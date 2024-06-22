@@ -5,6 +5,7 @@ return {
   opts = function()
     return {
       options = {
+        theme = 'deepwhite',
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
         globalstatus = true,

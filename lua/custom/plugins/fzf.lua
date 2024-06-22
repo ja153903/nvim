@@ -18,6 +18,13 @@ return {
             horizontal = 'right:40%',
           },
         },
+        previewers = {
+          bat = {
+            cmd = 'bat',
+            args = '--color=always --style=numbers,changes',
+            theme = 'gruvbox-light',
+          },
+        },
       }
     end,
     keys = {
