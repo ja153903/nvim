@@ -1,9 +1,9 @@
 return {
   {
     'craftzdog/solarized-osaka.nvim',
-    -- enabled = false,
-    lazy = false,
-    priority = 1000,
+    enabled = false,
+    -- lazy = false,
+    -- priority = 1000,
     opts = {
       -- your configuration comes here
       -- or leave it empty to use the default settings
@@ -26,8 +26,8 @@ return {
       dim_inactive = false, -- dims inactive windows
       lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
     },
-    init = function()
-      vim.cmd.colorscheme 'solarized-osaka'
-    end,
+    -- init = function()
+    --   vim.cmd.colorscheme 'solarized-osaka'
+    -- end,
   },
 }
