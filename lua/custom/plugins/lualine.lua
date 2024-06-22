@@ -5,7 +5,6 @@ return {
   opts = function()
     return {
       options = {
-        theme = 'solarized_dark',
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
         globalstatus = true,

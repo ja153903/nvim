@@ -1,8 +1,9 @@
 return {
   {
     'scottmckendry/cyberdream.nvim',
-    lazy = false,
-    priority = 1000,
+    enabled = false,
+    -- lazy = false,
+    -- priority = 1000,
     config = function()
       require('cyberdream').setup {
         -- Enable transparent background
@@ -35,7 +36,7 @@ return {
         },
       }
 
-      vim.cmd.colorscheme 'cyberdream'
+      -- vim.cmd.colorscheme 'cyberdream'
     end,
   },
 }
