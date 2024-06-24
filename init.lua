@@ -303,6 +303,7 @@ else
               },
             },
           },
+          hls = {},
         }
 
         require('mason').setup()
