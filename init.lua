@@ -230,7 +230,9 @@ else
               vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
             end
 
-            map('gd', require('fzf-lua').lsp_definitions, '[G]oto [D]efinitions')
+            map('gd', function()
+              require('fzf-lua').lsp_definitions { jump_to_single_result = true }
+            end, '[G]oto [D]efinitions')
             map('gr', require('fzf-lua').lsp_references, '[G]oto [R]eferences')
             map('gI', require('fzf-lua').lsp_implementations, '[G]oto [I]mplementations')
 
