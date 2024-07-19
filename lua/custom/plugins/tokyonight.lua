@@ -1,8 +1,9 @@
 return {
   {
     'folke/tokyonight.nvim',
-    lazy = false,
-    priority = 1000,
+    -- lazy = false,
+    -- priority = 1000,
+    enabled = false,
     opts = {
       styles = {
         -- Style to be applied to different syntax groups
@@ -14,7 +15,7 @@ return {
       },
     },
     init = function()
-      vim.cmd.colorscheme 'tokyonight-storm'
+      -- vim.cmd.colorscheme 'tokyonight-storm'
     end,
   },
 }

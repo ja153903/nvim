@@ -30,7 +30,7 @@ return {
         list = false,
         conceallevel = 3,
         concealcursor = 'nvic',
-        -- winhighlight = 'NormalFloat:OilFloatBackground',
+        winhighlight = 'NormalFloat:none',
         winblend = 0,
       },
       -- Send deleted files to the trash instead of permanently deleting them (:help oil-trash)
@@ -128,7 +128,7 @@ return {
         max_height = 0,
         border = 'rounded',
         win_options = {
-          -- winhighlight = 'NormalFloat:OilFloatBackground',
+          winhighlight = 'NormalFloat:none',
           winblend = 0,
         },
         -- This is the config that will be passed to nvim_open_win.
@@ -157,7 +157,7 @@ return {
         height = nil,
         border = 'rounded',
         win_options = {
-          -- winhighlight = 'NormalFloat:OilFloatBackground',
+          winhighlight = 'NormalFloat:none',
           winblend = 0,
         },
         -- Whether the preview window is automatically updated when the cursor is moved
@@ -174,7 +174,7 @@ return {
         border = 'rounded',
         minimized_border = 'none',
         win_options = {
-          winhighlight = 'NormalFloat:OilFloatBackground',
+          winhighlight = 'NormalFloat:none',
           winblend = 0,
         },
       },
