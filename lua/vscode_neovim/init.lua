@@ -16,6 +16,9 @@ return {
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
+
+      require('mini.move').setup()
+      require('mini.pairs').setup()
     end,
   },
   { -- Highlight, edit, and navigate code
