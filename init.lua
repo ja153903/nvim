@@ -129,7 +129,6 @@ vim.opt.rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 
-
 if vim.g.vscode then
   require('lazy').setup {
     spec = {
